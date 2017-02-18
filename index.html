@@ -3,9 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Barbershop Baradinsky</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Barbershop Borodinski</title>
 </head>
 <body>
-<h1 class="lol"></h1>
+<header class="page-header">
+    <div class="page-header__logo">
+        <img src="images/logotype-mobile.svg" alt="Барбершоп Бородинский">
+    </div>
+    <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <ul class="main-nav__list">
+            <li class="main-nav__item"><a>Главная</a></li>
+            <li class="main-nav__item"><a href="#">Наши работы</a></li>
+            <li class="main-nav__item"><a href="#">Записаться</a></li>
+            <li class="main-nav__item"><a href="#">Контакты</a></li>
+            <li class="main-nav__item"><a href="#">Вход</a></li>
+        </ul>
+    </nav>
+</header>
+    <main>
+        <section class="stats">
+            <header class="stats__header">
+                <h1>Стрижка у нас это выгодно!</h1>
+                <p>Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
+            </header>
+            <table class="stats__list">
+                <tr>
+                    <td class="stats__price">1 500<sup>*</sup></td>
+                    <td class="stats__description">рублей вложений</td>
+                </tr>
+                <tr>
+                    <td class="stats__price">7 200</td>
+                    <td class="stats__description">секунд времени мастера</td>
+                </tr>
+                <tr>
+                    <td class="stats__price">90 000</td>
+                    <td class="stats__description">постриженных волос</td>
+                </tr>
+                <tr>
+                    <td class="stats__price">500 000<sup>*</sup></td>
+                    <td class="stats__description">лайков и комплиментов</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <p><sup>*</sup> — приведенные данные ложь</p>
+            <article>
+                <div>
+                    <img src="images/advantage-1-illustration.svg" alt="Быстро">
+                </div>
+                <h1>Быстро</h1>
+                <p>Мы делаем свою работу быстро! Два часа пролетят незаметно и Вы — счастливый обладатель </p>
+            </article>
+        </section>
+        <section class="news">
+            <h2 class="news__title">Новости и акции</h2>
+            <ul>
+                <li>
+                    <time datetime="2017-11-19"><strong>29</strong>сент</time>
+                    <p>Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.</p>
+                </li>
+                <li>
+                    <time datetime="2017-11-19"><strong>19</strong>сент</time>
+                    В нашей команде пополнение, Борис «Маньяк» Стригунец,
+                    обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться!
+                </li>
+            </ul>
+            <a class="news__show-all btn" href="#">Показать все</a>
+        </section>
+        <section class="reviews">
+            <h2 class="reviews__title">Отзывы о нас</h2>
+            <div class="reviews__list">
+                <blockquote class="reviews__item">
+                    <h3 class="reviews__author-name">Тревис Баркер</h3>
+                    <p class="reviews__author-comment">Спасибо за лысину!
+                        Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
+                    </p>
+                </blockquote>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <section class="page-footer__address">
+            <h3>Барбершоп Бородинский</h3>
+            <p>г. Санкт-Петербург, ул. Большая Конюшенная 19/8</p>
+            <a href="tel: +7(812)555-66-66">+7(812)555-66-66</a>
+        </section>
+        <section class="page-footer__social">
+            <span class="social-list">
+                <a class="social-list__link  social-list__link--vk" href="http://vk.com">vk.com</a>
+                <a class="social-list__link  social-list__link--fb" href="http://facebbok.com">facebook.com</a>
+                <a class="social-list__link  social-list__link--inst" href="http://instagram.com">instagram.com</a>
+            </span>
+        </section>
+        <section class="page-footer__copyright">
+            <p>Дизайн:</p>
+            <a href="#">html Academy</a>
+            <p>Верстка:</p>
+            <a href="#">Apheliont</a>
+        </section>
+    </footer>
 </body>
 </html>
