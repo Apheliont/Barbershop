@@ -1,0 +1,15 @@
+.page-header__logo {
+  background-color: $black_1;
+  text-align: center;
+  height: 85px;
+  &:before {
+    content: "";
+    height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  img {
+    width: 225px;
+    vertical-align: middle;
+  }
+}

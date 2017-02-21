@@ -1,4 +1,17 @@
-@import "_normalize.scss";
-@import "_variables.scss";
-@import "_mixins.scss";
-@import "global/_fonts.scss";
+@import "normalize";
+@import "variables";
+@import "mixins";
+@import "global/_layout";
+@import "global/fonts";
+@import "global/buttons";
+@import "global/helpers";
+
+//partials
+@import "blocks/main-nav";
+@import "blocks/page-footer";
+@import "blocks/page-header";
+@import "blocks/social-list";
+@import "blocks/stats";
+@import "blocks/advantages";
+@import "blocks/news";
+@import "blocks/reviews";

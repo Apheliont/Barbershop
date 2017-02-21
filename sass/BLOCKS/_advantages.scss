@@ -1,0 +1,26 @@
+.advantages {
+  position: relative;
+  min-height: 368px;
+  box-sizing: border-box;
+  padding: 23px 40px;
+  text-align: center;
+  background-color: $black_1;
+  color: white;
+}
+
+.advantages__item {
+  img {
+    width: 93px;
+    height: 93px;
+  }
+}
+
+.advantages__title {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.advantages_description {
+  font-size: 20px;
+  line-height: 27px;
+}

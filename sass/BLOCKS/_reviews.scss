@@ -1,0 +1,38 @@
+.reviews {
+  position: relative;
+  text-align: center;
+  background-color: $white_1;
+  padding: 30px 16px 50px 16px;
+}
+
+.reviews__title {
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+
+.reviews__item {
+  position: relative;
+  padding-left: 65px;
+  margin: 0;
+  text-align: left;
+}
+
+.reviews__author-photo {
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+
+.reviews__author-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.reviews__author-comment {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: bold;
+}

@@ -1,0 +1,50 @@
+.stats__header {
+  text-align: center;
+  min-height: 183px;
+  box-sizing: border-box;
+  padding: 30px 38px;
+  background-color: white;
+}
+
+.stats__list {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  color: white;
+  tr:nth-of-type(even) {
+    background-color: $grey_2;
+  }
+  tr:nth-of-type(odd) {
+    background-color: $grey_1;
+  }
+}
+
+.stats__caption {
+  caption-side: bottom;
+  height: 38px;
+  box-sizing: border-box;
+  padding-top: 18px;
+  background-color: $black_1;
+  color: $grey_3;
+}
+
+.stats__price {
+  width: 60%;
+  height: 78px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 16px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.stats__description {
+  width: 40%;
+  height: 78px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 16px;
+  text-align: right;
+  font-size: 18px;
+  font-weight: normal;
+}
