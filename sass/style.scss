@@ -1,10 +1,11 @@
 @import "normalize";
 @import "variables";
 @import "mixins";
-@import "global/_layout";
+@import "global/layout";
 @import "global/fonts";
 @import "global/buttons";
 @import "global/helpers";
+@import "global/keyframes";
 
 //partials
 @import "blocks/main-nav";

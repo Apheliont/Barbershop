@@ -6,6 +6,18 @@
   background-color: white;
 }
 
+.stats__title {
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
+}
+
+.stats__subtitle {
+  margin-top: 25px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
 .stats__list {
   border-collapse: collapse;
   table-layout: fixed;

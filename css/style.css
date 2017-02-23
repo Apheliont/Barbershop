@@ -440,6 +440,100 @@ body {
 .hidden {
   display: none; }
 
+@keyframes menu {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 100; } }
+.main-nav {
+  position: relative;
+  height: 50px;
+  background-color: #826550; }
+
+.main-nav__menu-list {
+  position: absolute;
+  width: 245px;
+  right: 0;
+  top: -18px;
+  list-style: none;
+  padding-left: 0; }
+
+.main-nav__login-list {
+  position: absolute;
+  width: 245px;
+  right: 0;
+  top: 180px;
+  list-style: none;
+  padding-left: 0;
+  display: none; }
+  .main-nav__login-list--visible {
+    display: block;
+    animation: menu 0.5s; }
+
+.main-nav__close {
+  display: none;
+  position: absolute;
+  border: none;
+  outline: none;
+  width: 75px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  color: white;
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 50px;
+  background-color: #6a4d38; }
+  .main-nav__close--visible {
+    display: block;
+    animation: menu 0.5s; }
+
+.main-nav__toggle {
+  z-index: 100;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background: #6a4d38;
+  color: white; }
+  .main-nav__toggle:before {
+    content: "\2261";
+    font-size: 2.3em; }
+
+.main-nav__menu-item {
+  box-sizing: border-box;
+  padding-left: 20px;
+  height: 50px;
+  line-height: 50px;
+  background-color: #826550; }
+  .main-nav__menu-item--visible {
+    display: block;
+    animation: menu 0.5s; }
+  .main-nav__menu-item:nth-child(n + 1) {
+    border-bottom: 1px solid #71543f;
+    border-top: 1px solid #886e5b; }
+  .main-nav__menu-item a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase; }
+  .main-nav__menu-item:not(.main-nav__menu-item--visible) {
+    display: none; }
+
+.main-nav__login-item {
+  box-sizing: border-box;
+  padding-left: 20px;
+  height: 50px;
+  line-height: 50px;
+  border-top: 1px solid #886e5b;
+  background-color: #6a4d38; }
+  .main-nav__login-item a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase; }
+
 .page-footer {
   position: relative;
   background-color: #292929;
@@ -450,18 +544,18 @@ body {
   .page-footer:before {
     content: "";
     position: absolute;
+    height: 35px;
     left: 0;
     right: 0;
-    top: 0;
-    border-left: 160px solid transparent;
-    border-right: 160px solid transparent;
-    border-top: 35px solid #f8f5f2; }
+    top: -1px;
+    clip-path: polygon(50% 100%, 0 20%, 0 0, 100% 0, 100% 20%);
+    background-color: #f8f5f2; }
   .page-footer:after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
-    top: 35px;
+    top: 34px;
     height: 1px;
     background-color: rgba(229, 221, 213, 0.2); }
 
@@ -494,7 +588,6 @@ body {
 .social-list__icon {
   width: 50%;
   height: 40%;
-  overflow: auto;
   margin: auto;
   position: absolute;
   top: 0;
@@ -533,6 +626,16 @@ body {
   box-sizing: border-box;
   padding: 30px 38px;
   background-color: white; }
+
+.stats__title {
+  margin: 0;
+  padding: 0;
+  line-height: 30px; }
+
+.stats__subtitle {
+  margin-top: 25px;
+  margin-bottom: 0;
+  padding: 0; }
 
 .stats__list {
   border-collapse: collapse;
@@ -573,16 +676,50 @@ body {
 
 .advantages {
   position: relative;
-  min-height: 368px;
+  min-height: 375px;
   box-sizing: border-box;
   padding: 23px 40px;
   text-align: center;
   background-color: #242424;
   color: white; }
 
-.advantages__item img {
-  width: 93px;
-  height: 93px; }
+.advantages__item {
+  display: none; }
+  .advantages__item img {
+    width: 93px;
+    height: 93px; }
+
+.advantages__rbutton-1,
+.advantages__rbutton-2,
+.advantages__rbutton-3 {
+  display: none; }
+
+.advantages__controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.advantages__lbutton {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  cursor: pointer;
+  transform: rotate(45deg);
+  border: 1px solid #a5a5a5; }
+  .advantages__lbutton:nth-of-type(2) {
+    margin-left: 10px;
+    margin-right: 10px; }
+
+.advantages__rbutton-1:checked ~ .advantages__controls .advantages__lbutton:nth-of-type(1),
+.advantages__rbutton-2:checked ~ .advantages__controls .advantages__lbutton:nth-of-type(2),
+.advantages__rbutton-3:checked ~ .advantages__controls .advantages__lbutton:nth-of-type(3) {
+  background-color: white; }
+
+.advantages__rbutton-1:checked ~ .advantages__item:nth-of-type(1),
+.advantages__rbutton-2:checked ~ .advantages__item:nth-of-type(2),
+.advantages__rbutton-3:checked ~ .advantages__item:nth-of-type(3) {
+  display: block; }
 
 .advantages__title {
   font-size: 30px;
@@ -604,12 +741,12 @@ body {
   .news:before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -1px;
     left: 0;
     right: 0;
-    border-left: 160px solid transparent;
-    border-right: 160px solid transparent;
-    border-top: 35px solid #242424; }
+    height: 35px;
+    clip-path: polygon(50% 100%, 0 20%, 0 0, 100% 0, 100% 20%);
+    background-color: #242424; }
 
 .news__title {
   padding: 0;
@@ -670,9 +807,10 @@ body {
 
 .reviews {
   position: relative;
+  min-height: 250px;
+  padding: 30px 16px 50px 16px;
   text-align: center;
-  background-color: #f8f5f2;
-  padding: 30px 16px 50px 16px; }
+  background-color: #f8f5f2; }
 
 .reviews__title {
   padding: 0;
@@ -681,10 +819,43 @@ body {
   text-transform: uppercase; }
 
 .reviews__item {
+  display: none;
   position: relative;
   padding-left: 65px;
   margin: 0;
   text-align: left; }
+
+.reviews__rbutton-1,
+.reviews__rbutton-2,
+.reviews__rbutton-3 {
+  display: none; }
+
+.reviews__controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.reviews__lbutton {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  cursor: pointer;
+  transform: rotate(45deg);
+  border: 1px solid #a5a5a5; }
+  .reviews__lbutton:nth-of-type(2) {
+    margin-left: 10px;
+    margin-right: 10px; }
+
+.reviews__rbutton-1:checked ~ .reviews__controls .reviews__lbutton:nth-of-type(1),
+.reviews__rbutton-2:checked ~ .reviews__controls .reviews__lbutton:nth-of-type(2),
+.reviews__rbutton-3:checked ~ .reviews__controls .reviews__lbutton:nth-of-type(3) {
+  background-color: #292929; }
+
+.reviews__rbutton-1:checked ~ .reviews__list .reviews__item:nth-of-type(1),
+.reviews__rbutton-2:checked ~ .reviews__list .reviews__item:nth-of-type(2),
+.reviews__rbutton-3:checked ~ .reviews__list .reviews__item:nth-of-type(3) {
+  display: block; }
 
 .reviews__author-photo {
   position: absolute;
@@ -696,6 +867,8 @@ body {
   font-weight: bold; }
 
 .reviews__author-comment {
+  padding: 0;
+  margin: 0;
   font-size: 18px;
   line-height: 27px;
   font-weight: bold; }

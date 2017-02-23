@@ -1,0 +1,104 @@
+.main-nav {
+  position: relative;
+  height: 50px;
+  background-color: $brown_1;
+}
+
+.main-nav__menu-list {
+  position: absolute;
+  width: 245px;
+  right: 0;
+  top: -18px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.main-nav__login-list {
+  position: absolute;
+  width: 245px;
+  right: 0;
+  top: 180px;
+  list-style: none;
+  padding-left: 0;
+  display: none;
+  &--visible {
+    display: block;
+    animation: menu 0.5s;
+  }
+}
+
+.main-nav__close {
+  display: none;
+  position: absolute;
+  border: none;
+  outline: none;
+  width: 75px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  color: white;
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 50px;
+  background-color: $brown_2;
+  &--visible {
+    display: block;
+    animation: menu 0.5s;
+  }
+}
+
+.main-nav__toggle {
+  z-index: 100;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background: $brown_2;
+  color: white;
+  &:before {
+    content: "\2261";
+    font-size: 2.3em;
+  }
+}
+
+.main-nav__menu-item {
+  box-sizing: border-box;
+  padding-left: 20px;
+  height: 50px;
+  line-height: 50px;
+  background-color: $brown_1;
+  &--visible {
+    display: block;
+    animation: menu 0.5s;
+  }
+
+  &:nth-child(n + 1) {
+      border-bottom: 1px solid $brown_4;
+      border-top: 1px solid $brown_5;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+  }
+  &:not(.main-nav__menu-item--visible) {
+    display: none;
+  }
+}
+
+.main-nav__login-item {
+  box-sizing: border-box;
+  padding-left: 20px;
+  height: 50px;
+  line-height: 50px;
+  border-top: 1px solid $brown_5;
+  background-color: $brown_2;
+  a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+  }
+}

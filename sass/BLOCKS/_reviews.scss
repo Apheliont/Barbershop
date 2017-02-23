@@ -1,8 +1,10 @@
 .reviews {
   position: relative;
+  min-height: 250px;
+  padding: 30px 16px 50px 16px;
   text-align: center;
   background-color: $white_1;
-  padding: 30px 16px 50px 16px;
+
 }
 
 .reviews__title {
@@ -14,10 +16,49 @@
 
 
 .reviews__item {
+  display: none;
   position: relative;
   padding-left: 65px;
   margin: 0;
   text-align: left;
+}
+
+.reviews__rbutton-1,
+.reviews__rbutton-2,
+.reviews__rbutton-3 {
+  display: none;
+}
+
+.reviews__controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.reviews__lbutton {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  cursor: pointer;
+  transform: rotate(45deg);
+  border: 1px solid $grey_4;
+  &:nth-of-type(2) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.reviews__rbutton-1:checked ~ .reviews__controls .reviews__lbutton:nth-of-type(1),
+.reviews__rbutton-2:checked ~ .reviews__controls .reviews__lbutton:nth-of-type(2),
+.reviews__rbutton-3:checked ~ .reviews__controls .reviews__lbutton:nth-of-type(3) {
+  background-color: $black_2;
+}
+
+.reviews__rbutton-1:checked ~ .reviews__list .reviews__item:nth-of-type(1),
+.reviews__rbutton-2:checked ~ .reviews__list .reviews__item:nth-of-type(2),
+.reviews__rbutton-3:checked ~ .reviews__list .reviews__item:nth-of-type(3) {
+  display: block;
 }
 
 .reviews__author-photo {
@@ -32,6 +73,8 @@
 }
 
 .reviews__author-comment {
+  padding: 0;
+  margin: 0;
   font-size: 18px;
   line-height: 27px;
   font-weight: bold;

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://use.fontawesome.com/d3fcf98910.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <script difer src="javascript/script.js"></script>
+    <script defer src="javascript/script.js"></script>
     <title>Barbershop Borodinski</title>
 </head>
 <body>
@@ -15,21 +15,24 @@
         <img src="images/logo_mobile.svg" alt="Барбершоп Бородинский">
     </div>
     <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <ul class="main-nav__list">
-            <li class="main-nav__item"><a>Главная</a></li>
-            <li class="main-nav__item"><a href="#">Наши работы</a></li>
-            <li class="main-nav__item"><a href="#">Записаться</a></li>
-            <li class="main-nav__item"><a href="#">Контакты</a></li>
-            <li class="main-nav__item"><a href="#">Вход</a></li>
+        <button class="main-nav__toggle" type="button"></button>
+        <button class="main-nav__close" type="button">&#10005;</button>
+        <ul class="main-nav__menu-list">
+            <li class="main-nav__menu-item main-nav__menu-item--visible"><a>Главная</a></li>
+            <li class="main-nav__menu-item"><a href="#">Наши работы</a></li>
+            <li class="main-nav__menu-item"><a href="#">Записаться</a></li>
+            <li class="main-nav__menu-item"><a href="#">Контакты</a></li>
+        </ul>
+        <ul class="main-nav__login-list">
+            <li class="main-nav__login-item"><a href="#">Вход</a></li>
         </ul>
     </nav>
 </header>
     <main>
         <section class="stats">
             <header class="stats__header">
-                <h1>Стрижка у нас это выгодно!</h1>
-                <p>Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
+                <h1 class="stats__title">Стрижка у нас<br> это выгодно!</h1>
+                <p class="stats__subtitle">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
             </header>
             <table class="stats__list">
                 <caption class="stats__caption"><sup>*</sup> — приведенные данные ложь</caption>
@@ -55,13 +58,43 @@
             </table>
         </section>
         <section class="advantages">
+            <input class="advantages__rbutton-1" id="advantages_slide-1" type="radio" name="advantages" checked>
+            <input class="advantages__rbutton-2" id="advantages_slide-2" type="radio" name="advantages">
+            <input class="advantages__rbutton-3" id="advantages_slide-3" type="radio" name="advantages">
+            <div class="advantages__controls">
+                <label class="advantages__lbutton" for="advantages_slide-1"></label>
+                <label class="advantages__lbutton" for="advantages_slide-2"></label>
+                <label class="advantages__lbutton" for="advantages_slide-3"></label>
+            </div>
             <article class="advantages__item">
                 <div>
                     <img src="images/advantages_1.svg" alt="Быстро">
                 </div>
                 <h1 class="advantages__title">Быстро</h1>
-                <p class="advantages_description">Мы делаем свою работу быстро!
-                    Два часа пролетят незаметно и Вы — счастливый обладатель стильной стрижки-минутки</p>
+                <p class="advantages_description">
+                    Мы делаем свою работу быстро!
+                    Два часа пролетят незаметно и Вы — счастливый обладатель стильной стрижки-минутки
+                </p>
+            </article>
+            <article class="advantages__item">
+                <div>
+                    <img src="images/advantages_2.svg" alt="Круто">
+                </div>
+                <h1 class="advantages__title">Круто</h1>
+                <p class="advantages_description">
+                    Забудьте, как вы стриглись раньше.
+                    Мы сделаем из Вас звезду футбола или кино. Во всяком случае внешне.
+                </p>
+            </article>
+            <article class="advantages__item">
+                <div>
+                    <img src="images/advantages_3.svg" alt="Дорого">
+                </div>
+                <h1 class="advantages__title">Дорого</h1>
+                <p class="advantages_description">
+                    Наши мастера — профессионалы своего дела и не могут стоить дёшево.
+                    К тому же, разве цена не даёт определённый статус?
+                </p>
             </article>
         </section>
         <section class="news">
@@ -80,13 +113,35 @@
             <a class="news__show-all btn" href="#">Показать все</a>
         </section>
         <section class="reviews">
+            <input class="reviews__rbutton-1" id="reviews_slide-1" type="radio" name="reviews" checked>
+            <input class="reviews__rbutton-2" id="reviews_slide-2" type="radio" name="reviews">
+            <input class="reviews__rbutton-3" id="reviews_slide-3" type="radio" name="reviews">
+            <div class="reviews__controls">
+                <label class="reviews__lbutton" for="reviews_slide-1"></label>
+                <label class="reviews__lbutton" for="reviews_slide-2"></label>
+                <label class="reviews__lbutton" for="reviews_slide-3"></label>
+            </div>
             <h2 class="reviews__title">Отзывы о нас</h2>
             <div class="reviews__list">
                 <blockquote class="reviews__item">
-                    <img class="reviews__author-photo" src="images/review_travis.png" width="50px" height="50px" alt="Фото комментатора">
-                    <h3 class="reviews__author-name">Тревис Баркер</h3>
-                    <p class="reviews__author-comment">Спасибо за лысину!
-                        Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
+                <img class="reviews__author-photo" src="images/review_travis.png" width="50px" height="50px" alt="Фото комментатора">
+                <h3 class="reviews__author-name">Тревис Баркер</h3>
+                <p class="reviews__author-comment">Спасибо за лысину!
+                    Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
+                </p>
+            </blockquote>
+                <blockquote class="reviews__item">
+                    <img class="reviews__author-photo" src="images/review_someguy1.jpg" width="50px" height="50px" alt="Фото комментатора">
+                    <h3 class="reviews__author-name">Ник саймон</h3>
+                    <p class="reviews__author-comment">Новая философия!
+                        Вместе с новым стайлом у меня изменилось отношение к жизни! Парни то что вы делаетет это нереально!
+                    </p>
+                </blockquote>
+                <blockquote class="reviews__item">
+                    <img class="reviews__author-photo" src="images/review_someguy2.jpg" width="50px" height="50px" alt="Фото комментатора">
+                    <h3 class="reviews__author-name">Алекс Майлз</h3>
+                    <p class="reviews__author-comment">Это было круто!
+                        Смотри какую прелесть навел на моей голове мега крутой Иван Борода!
                     </p>
                 </blockquote>
             </div>
