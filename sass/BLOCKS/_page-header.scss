@@ -1,7 +1,11 @@
+.page-header {
+  position: relative;
+}
+
 .page-header__logo {
+  height: 85px;
   background-color: $black_1;
   text-align: center;
-  height: 85px;
   &:before {
     content: "";
     height: 100%;

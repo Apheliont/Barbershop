@@ -18,15 +18,38 @@
         <button class="main-nav__toggle" type="button"></button>
         <button class="main-nav__close" type="button">&#10005;</button>
         <ul class="main-nav__menu-list">
-            <li class="main-nav__menu-item main-nav__menu-item--visible"><a>Главная</a></li>
+            <li class="main-nav__menu-item  main-nav__menu-item--active"><a>Главная</a></li>
             <li class="main-nav__menu-item"><a href="#">Наши работы</a></li>
             <li class="main-nav__menu-item"><a href="#">Записаться</a></li>
             <li class="main-nav__menu-item"><a href="#">Контакты</a></li>
         </ul>
         <ul class="main-nav__login-list">
-            <li class="main-nav__login-item"><a href="#">Вход</a></li>
+            <li class="main-nav__login-item"><i class="fa fa-sign-in" aria-hidden="true"></i><a class="main-nav__login" href="#">Вход</a></li>
         </ul>
     </nav>
+    <div class="login-form">
+        <h2 class="login-form__title">Личный кабинет</h2>
+        <p class="login-form__description">Введите свой логин и пароль, чтобы войти</p>
+        <form class="login-form__form" action="#" method="POST">
+            <fieldset class="login-form__login-fieldset">
+                <input class="login-form__login" type="text" name="login" placeholder="Логин" required>
+                <i class="login-form__login-icon  fa  fa-user" aria-hidden="true"></i>
+            </fieldset>
+            <fieldset class="login-form__password-fieldset">
+                <input class="login-form__password" type="password" name="password" placeholder="Пароль" required>
+                <i class="login-form__password-icon  fa  fa-lock" aria-hidden="true"></i>
+            </fieldset>
+            <fieldset class="login-form__options-fieldset">
+                <label class="login-form__remember-label"><input class="login-form__remember-me  checkbox" type="checkbox" name="remember-me">
+                <span></span>Запомнить меня</label>
+                <a class="login-form__forgot-password" href="#">Я забыл пароль!</a>
+            </fieldset>
+            <fieldset class="login-form__buttons-fieldset">
+                <button class="login-form__submit btn" type="submit">Войти</button>
+                <button class="login-form__close btn" type="reset">Закрыть</button>
+            </fieldset>
+        </form>
+    </div>
 </header>
     <main>
         <section class="stats">
@@ -158,7 +181,7 @@
                 <a class="social-list__link" href="http://vk.com">
                     <i class="fa fa-2x fa-vk social-list__icon" aria-hidden="true"></i>
                     <span class="hidden">vk.com</span></a>
-                <a class="social-list__link" href="http://facebbok.com">
+                <a class="social-list__link" href="http://facebook.com">
                     <i class="fa fa-2x fa-facebook social-list__icon" aria-hidden="true"></i>
                     <span class="hidden">facebook.com</span></a>
                 <a class="social-list__link" href="http://instagram.com">

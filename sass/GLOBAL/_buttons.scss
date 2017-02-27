@@ -1,4 +1,39 @@
 .btn {
   text-decoration: none;
   text-transform: uppercase;
+  border: none;
+  outline: none;
+}
+
+.checkbox {
+  display: none;
+  & + span {
+    display: inline-block;
+    position: absolute;
+    top: -7px;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    border: 1px solid $brown_3;
+    background-color: white;
+  }
+
+  & + span:hover {
+    border-color: $brown_7;
+  }
+
+  & + span:active {
+    background-color: $brown_7;
+    color: black;
+  }
+  &:checked + span:before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 0;
+    left: 0;
+    background-color: black;
+    clip-path: polygon(16% 57%, 22% 50%, 49% 71%, 85% 21%, 92% 27%, 50% 84%);
+  }
 }

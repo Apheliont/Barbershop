@@ -2,6 +2,7 @@
   position: relative;
   height: 50px;
   background-color: $brown_1;
+  z-index: 100;
 }
 
 .main-nav__menu-list {
@@ -65,11 +66,15 @@
 }
 
 .main-nav__menu-item {
+  display: none;
   box-sizing: border-box;
   padding-left: 20px;
   height: 50px;
   line-height: 50px;
   background-color: $brown_1;
+  &:hover {
+    background-color: $brown_8;
+  }
   &--visible {
     display: block;
     animation: menu 0.5s;
@@ -83,9 +88,16 @@
     text-decoration: none;
     color: white;
     text-transform: uppercase;
+    &:active {
+      color: $brown_9;
+    }
   }
-  &:not(.main-nav__menu-item--visible) {
-    display: none;
+
+  &--active {
+    display: block;
+    &:hover {
+      background-color: $brown_1;
+    }
   }
 }
 
@@ -96,9 +108,20 @@
   line-height: 50px;
   border-top: 1px solid $brown_5;
   background-color: $brown_2;
+  color: white;
+  &:hover {
+    background-color: $brown_8;
+  }
+  &:active {
+    color: $brown_9;
+  }
   a {
+    margin-left: 10px;
     text-decoration: none;
     color: white;
     text-transform: uppercase;
+    &:active {
+      color: $brown_9;
+    }
   }
 }

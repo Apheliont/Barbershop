@@ -10,3 +10,19 @@
     clear: both;
   }
 }
+
+@mixin footerButtonsAction () {
+  &:hover {
+    border-color: $grey_6;
+  }
+  &:active {
+    border: none;
+    color: $grey_8;
+    background-color: $black_1;
+  }
+}
+
+@mixin checkbox() {
+
+
+}

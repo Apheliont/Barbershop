@@ -25,7 +25,7 @@
     right: 0;
     top: 34px;
     height: 1px;
-    background-color: rgba($brown_3, .2);
+    background-color: $grey_7;
   }
 }
 
@@ -51,13 +51,17 @@
   width: 33%;
   height: 97px;
   font-size: 18px;
-  border-top: 1px solid rgba($brown_3, .2);
-  border-bottom: 1px solid rgba($brown_3, .2);
+  border-top: 1px solid $grey_7;
+  border-bottom: 1px solid $grey_7;
   color: white;
   text-decoration: none;
+  @include footerButtonsAction();
   &:nth-of-type(2) {
-    border-left: 1px solid rgba($brown_3, .2);
-    border-right: 1px solid rgba($brown_3, .2);
+    border-left: 1px solid $grey_7;
+    border-right: 1px solid $grey_7;
+    &:hover {
+      border-color: $grey_6;
+    }
   }
 }
 
@@ -75,10 +79,11 @@
 
 .page-footer__phone,
 .page-footer__copyright-link {
-  border: 1px solid rgba($brown_3, .2);
+  border: 1px solid $grey_7;
   display: block;
   width: 100%;
   padding: 15px 0;
   color: white;
   font-weight: bold;
+  @include footerButtonsAction();
 }

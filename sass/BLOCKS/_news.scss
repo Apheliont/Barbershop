@@ -41,6 +41,27 @@
   padding-left: 65px;
   padding-bottom: 22px;
   text-align: left;
+  &:hover {
+    color: $brown_1;
+    text-decoration: underline;
+    .news__time-stamp {
+      background-color: $brown_1;
+      &:after {
+        background-color: $brown_1;
+      }
+    }
+  }
+  &:active {
+    color: $brown_6;
+    text-decoration: underline;
+      .news__time-stamp {
+        background-color: $brown_2;
+        color: $brown_6;
+      &:after {
+        background-color: $brown_2;
+      }
+    }
+  }
   &:not(:last-of-type) {
     border-bottom: 1px solid $brown_3;
   }
@@ -66,13 +87,12 @@
     content: "";
     display: block;
     position: absolute;
+    height: 10px;
     bottom: -10px;
     left: 0;
     right: 0;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-    border-top: 10px solid black;
-
+    clip-path: polygon(50% 100%, 0 20%, 0 0, 100% 0, 100% 20%);
+    background-color: black;
   }
 }
 
@@ -88,4 +108,11 @@
   padding: 15px 0;
   color: black;
   font-weight: bold;
+  &:hover {
+    border-color: $brown_7;
+  }
+  &:active {
+    background-color: $brown_7;
+    color: $grey_5;
+  }
 }
