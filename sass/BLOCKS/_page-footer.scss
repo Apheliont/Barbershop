@@ -65,6 +65,14 @@
   }
 }
 
+.social-list__link-description {
+  line-height: 97px;
+  text-transform: uppercase;
+  &--hidden {
+    display: none;
+  }
+}
+
 .social-list__icon {
   width: 50%;
   height: 40%;

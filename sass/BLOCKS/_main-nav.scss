@@ -14,19 +14,6 @@
   padding-left: 0;
 }
 
-.main-nav__login-list {
-  position: absolute;
-  width: 245px;
-  right: 0;
-  top: 180px;
-  list-style: none;
-  padding-left: 0;
-  display: none;
-  &--visible {
-    display: block;
-    animation: menu 0.5s;
-  }
-}
 
 .main-nav__close {
   display: none;
@@ -85,6 +72,7 @@
       border-top: 1px solid $brown_5;
   }
   a {
+    display: block;
     text-decoration: none;
     color: white;
     text-transform: uppercase;
@@ -98,6 +86,20 @@
     &:hover {
       background-color: $brown_1;
     }
+  }
+}
+
+.main-nav__login-list {
+  position: absolute;
+  width: 245px;
+  right: 0;
+  top: 180px;
+  list-style: none;
+  padding-left: 0;
+  display: none;
+  &--visible {
+    display: block;
+    animation: menu 0.5s;
   }
 }
 
@@ -116,7 +118,9 @@
     color: $brown_9;
   }
   a {
-    margin-left: 10px;
+    display: inline-block;
+    width: 180px;
+    margin-left: 20px;
     text-decoration: none;
     color: white;
     text-transform: uppercase;

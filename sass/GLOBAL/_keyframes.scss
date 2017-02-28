@@ -22,3 +22,26 @@
     transform: translateY(0);
   }
 }
+
+
+@keyframes back {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+@keyframes formerror {
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(-10px);
+  }
+  0%, 100% {
+    transform: translateX(0);
+  }
+}
