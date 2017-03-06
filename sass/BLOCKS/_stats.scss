@@ -1,6 +1,13 @@
+.stats {
+  //@include breakpoint(tablet) {
+  //  margin-top: -185px;
+  //  z-index: 100;
+  //}
+}
+
 .stats__header {
   text-align: center;
-  min-height: 183px;
+  min-height: 185px;
   box-sizing: border-box;
   padding: 30px 38px;
   background-color: white;

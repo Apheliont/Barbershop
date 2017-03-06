@@ -8,7 +8,6 @@ var menu = document.querySelectorAll(".main-nav__menu-item");
 var login = document.querySelector(".main-nav__login-list");
 var loginButton = document.querySelector(".main-nav__login");
 var closeButton = document.querySelector(".main-nav__close");
-var visibleMenuItem = document.querySelector(".main-nav__menu-item--visible");
 var closeLoginFormBtn = document.querySelector(".login-form__close");
 var loginForm = document.querySelector(".login-form");
 var loginFormInputLogin = document.querySelector(".login-form__login");
@@ -27,7 +26,6 @@ function closeMenu () {
     }
     login.classList.remove("main-nav__login-list--visible");
     closeButton.classList.remove("main-nav__close--visible");
-    visibleMenuItem.classList.add("main-nav__menu-item--visible");
 }
 
 // Кнопка закрытия формы логина

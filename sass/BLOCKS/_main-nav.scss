@@ -3,6 +3,16 @@
   height: 50px;
   background-color: $brown_1;
   z-index: 100;
+
+  @include breakpoint(tablet) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    @include clearfix;
+    height: 70px;
+    background-color: black;
+  }
 }
 
 .main-nav__menu-list {
@@ -12,6 +22,13 @@
   top: -18px;
   list-style: none;
   padding-left: 0;
+  @include breakpoint(tablet) {
+    position: static;
+    float: left;
+    margin: 0;
+    top: 0;
+    width: 565px;
+  }
 }
 
 
@@ -50,6 +67,9 @@
     content: "\2261";
     font-size: 2.3em;
   }
+  @include breakpoint(tablet) {
+    display: none;
+  }
 }
 
 .main-nav__menu-item {
@@ -87,6 +107,17 @@
       background-color: $brown_1;
     }
   }
+  @include breakpoint(tablet) {
+    display: inline-block;
+    padding: 0;
+    height: 70px;
+    line-height: 70px;
+    margin-right: 28px;
+    background-color: transparent;
+    &:nth-child(n + 1) {
+      border: none;
+    }
+  }
 }
 
 .main-nav__login-list {
@@ -100,6 +131,14 @@
   &--visible {
     display: block;
     animation: menu 0.5s;
+  }
+  @include breakpoint(tablet) {
+    display: block;
+    position: static;
+    float: right;
+    margin: 0;
+    top: 0;
+    width: 120px;
   }
 }
 
@@ -117,15 +156,28 @@
   &:active {
     color: $brown_9;
   }
-  a {
-    display: inline-block;
-    width: 180px;
-    margin-left: 20px;
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-    &:active {
-      color: $brown_9;
-    }
+
+  @include breakpoint(tablet) {
+    height: 70px;
+    line-height: 70px;
+    padding-left: 0;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.main-nav__login {
+  display: inline-block;
+  width: 180px;
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  &:active {
+    color: $brown_9;
+  }
+
+  @include breakpoint(tablet) {
+    width: 50px;
   }
 }
