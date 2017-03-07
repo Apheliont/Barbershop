@@ -1,3 +1,10 @@
 .wrapper {
   @include wrapper;
 }
+
+.inner_wrapper {
+  @include breakpoint(tablet) {
+    width: 640px;
+    margin: 0 auto;
+  }
+}

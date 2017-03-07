@@ -1,8 +1,8 @@
 .stats {
-  //@include breakpoint(tablet) {
-  //  margin-top: -185px;
-  //  z-index: 100;
-  //}
+  @include breakpoint(tablet) {
+    margin-top: -185px;
+    z-index: 100;
+  }
 }
 
 .stats__header {
@@ -11,6 +11,9 @@
   box-sizing: border-box;
   padding: 30px 38px;
   background-color: white;
+  @include breakpoint(tablet) {
+    padding: 0;
+  }
 }
 
 .stats__title {
@@ -19,15 +22,45 @@
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+  @include breakpoint(tablet) {
+    float: left;
+    width: 320px;
+    box-sizing: border-box;
+    padding-left: 35px;
+    padding-top: 30px;
+    text-align: left;
+    font-size: 40px;
+    line-height: 40px;
+    text-transform: none;
+  }
 }
 
 .stats__subtitle {
   margin-top: 25px;
   margin-bottom: 0;
   padding: 0;
+  @include breakpoint(tablet) {
+    float: right;
+    width: 320px;
+    box-sizing: border-box;
+    padding-top: 35px;
+    padding-left: 35px;
+    padding-right: 70px;
+    margin: 0;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: left;
+  }
+}
+
+.stats__list-wrapper {
+  @include breakpoint(tablet) {
+    background-color: $grey_9;
+  }
 }
 
 .stats__list {
+  position: relative;
   border-collapse: collapse;
   table-layout: fixed;
   width: 100%;
@@ -38,6 +71,46 @@
   tr:nth-of-type(odd) {
     background-color: $grey_1;
   }
+
+  @include breakpoint(tablet) {
+    tr {
+      height: 160px;
+      width: 320px;
+      box-sizing: border-box;
+      padding-left: 35px;
+      padding-top: 28px;
+    }
+    tr:nth-of-type(even) {
+      float: right;
+
+    }
+    tr:nth-of-type(odd) {
+      float: left;
+    }
+    tr:first-child,
+    tr:last-child {
+      background-color: $grey_1;
+    }
+    tr:nth-child(2) {
+      background-color: $grey_2;
+    }
+    tr:nth-child(3) {
+      background-color: $grey_9;
+    }
+    .stats__price,
+    .stats__description {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+    .stats__price {
+      font-size: 72px;
+      padding-left: 0;
+    }
+    .stats__description {
+      font-size: 20px;
+    }
+  }
 }
 
 .stats__caption {
@@ -47,6 +120,12 @@
   padding-top: 18px;
   background-color: $black_1;
   color: $grey_3;
+  @include breakpoint(tablet) {
+    position: absolute;
+    top: -60px;
+    left: 37px;
+    background-color: transparent;
+  }
 }
 
 .stats__price {

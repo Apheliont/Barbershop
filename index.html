@@ -15,17 +15,19 @@
         <!--<img src="images/logo_mobile.svg" alt="Барбершоп Бородинский">-->
     </div>
     <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"></button>
-        <button class="main-nav__close" type="button">&#10005;</button>
-        <ul class="main-nav__menu-list">
-            <li class="main-nav__menu-item  main-nav__menu-item--active"><a>Главная</a></li>
-            <li class="main-nav__menu-item"><a href="#">Наши работы</a></li>
-            <li class="main-nav__menu-item"><a href="#">Записаться</a></li>
-            <li class="main-nav__menu-item"><a href="#">Контакты</a></li>
-        </ul>
-        <ul class="main-nav__login-list">
-            <li class="main-nav__login-item"><i class="fa fa-sign-in" aria-hidden="true"></i><a class="main-nav__login" href="#">Вход</a></li>
-        </ul>
+        <div class="inner_wrapper">
+            <button class="main-nav__toggle" type="button"></button>
+            <button class="main-nav__close" type="button">&#10005;</button>
+            <ul class="main-nav__menu-list">
+                <li class="main-nav__menu-item  main-nav__menu-item--active"><a>Главная</a></li>
+                <li class="main-nav__menu-item"><a href="#">Наши работы</a></li>
+                <li class="main-nav__menu-item"><a href="#">Записаться</a></li>
+                <li class="main-nav__menu-item"><a href="#">Контакты</a></li>
+            </ul>
+            <ul class="main-nav__login-list">
+                <li class="main-nav__login-item"><i class="fa fa-sign-in" aria-hidden="true"></i><a class="main-nav__login" href="#">Вход</a></li>
+            </ul>
+        </div>
     </nav>
     <div class="login-form">
         <h2 class="login-form__title">Личный кабинет</h2>
@@ -53,32 +55,37 @@
 </header>
     <main>
         <section class="stats">
-            <header class="stats__header">
-                <h1 class="stats__title">Стрижка у нас<br> это выгодно!</h1>
-                <p class="stats__subtitle">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
-            </header>
-            <table class="stats__list">
-                <caption class="stats__caption"><sup>*</sup> — приведенные данные ложь</caption>
-                <tbody>
-                    <tr>
-                        <td class="stats__price">1 500<sup>*</sup></td>
-                        <td class="stats__description">рублей вложений</td>
-                    </tr>
-                    <tr>
-                        <td class="stats__price">7 200</td>
-                        <td class="stats__description">секунд времени мастера</td>
-                    </tr>
-                    <tr>
-                        <td class="stats__price">90 000</td>
-                        <td class="stats__description">постриженных волос</td>
-                    </tr>
-                    <tr>
-                        <td class="stats__price">500 000<sup>*</sup></td>
-                        <td class="stats__description">лайков и комплиментов</td>
-                    </tr>
-                </tbody>
-
-            </table>
+            <div class="inner_wrapper">
+                <header class="stats__header">
+                    <h1 class="stats__title">Стрижка у нас<br> это выгодно!</h1>
+                    <p class="stats__subtitle">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
+                </header>
+            </div>
+                <div class="stats__list-wrapper">
+                    <div class="inner_wrapper">
+                        <table class="stats__list">
+                            <caption class="stats__caption"><sup>*</sup> — приведенные данные ложь</caption>
+                            <tbody>
+                                <tr>
+                                    <td class="stats__price">1 500<sup>*</sup></td>
+                                    <td class="stats__description">рублей вложений</td>
+                                </tr>
+                                <tr>
+                                    <td class="stats__price">7 200</td>
+                                    <td class="stats__description">секунд времени мастера</td>
+                                </tr>
+                                <tr>
+                                    <td class="stats__price">90 000</td>
+                                    <td class="stats__description">постриженных волос</td>
+                                </tr>
+                                <tr>
+                                    <td class="stats__price">500 000<sup>*</sup></td>
+                                    <td class="stats__description">лайков и комплиментов</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
         </section>
         <section class="advantages">
             <input class="advantages__rbutton-1" id="advantages_slide-1" type="radio" name="advantages" checked>
@@ -89,36 +96,32 @@
                 <label class="advantages__lbutton" for="advantages_slide-2"></label>
                 <label class="advantages__lbutton" for="advantages_slide-3"></label>
             </div>
-            <article class="advantages__item">
-                <div>
+            <div class="inner_wrapper">
+                <article class="advantages__item">
                     <img src="images/advantages_1.svg" alt="Быстро">
-                </div>
-                <h1 class="advantages__title">Быстро</h1>
-                <p class="advantages_description">
-                    Мы делаем свою работу быстро!
-                    Два часа пролетят незаметно и Вы — счастливый обладатель стильной стрижки-минутки
-                </p>
-            </article>
-            <article class="advantages__item">
-                <div>
+                    <h1 class="advantages__title">Быстро</h1>
+                    <p class="advantages_description">
+                        Мы делаем свою работу быстро!
+                        Два часа пролетят незаметно и Вы — счастливый обладатель стильной стрижки-минутки
+                    </p>
+                </article>
+                <article class="advantages__item">
                     <img src="images/advantages_2.svg" alt="Круто">
-                </div>
-                <h1 class="advantages__title">Круто</h1>
-                <p class="advantages_description">
-                    Забудьте, как вы стриглись раньше.
-                    Мы сделаем из Вас звезду футбола или кино. Во всяком случае внешне.
-                </p>
-            </article>
-            <article class="advantages__item">
-                <div>
+                    <h1 class="advantages__title">Круто</h1>
+                    <p class="advantages_description">
+                        Забудьте, как вы стриглись раньше.
+                        Мы сделаем из Вас звезду футбола или кино. Во всяком случае внешне.
+                    </p>
+                </article>
+                <article class="advantages__item">
                     <img src="images/advantages_3.svg" alt="Дорого">
-                </div>
-                <h1 class="advantages__title">Дорого</h1>
-                <p class="advantages_description">
-                    Наши мастера — профессионалы своего дела и не могут стоить дёшево.
-                    К тому же, разве цена не даёт определённый статус?
-                </p>
-            </article>
+                    <h1 class="advantages__title">Дорого</h1>
+                    <p class="advantages_description">
+                        Наши мастера — профессионалы своего дела и не могут стоить дёшево.
+                        К тому же, разве цена не даёт определённый статус?
+                    </p>
+                </article>
+            </div>
         </section>
         <section class="news">
             <h2 class="news__title">Новости и акции</h2>

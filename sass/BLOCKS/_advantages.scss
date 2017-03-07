@@ -6,13 +6,47 @@
   text-align: center;
   background-color: $black_1;
   color: white;
+  @include breakpoint(tablet) {
+    background-color: $grey_9;
+  }
 }
 
 .advantages__item {
   display: none;
   img {
+    display: block;
+    margin: 0 auto;
     width: 93px;
     height: 93px;
+  }
+  @include breakpoint(tablet) {
+    @include clearfix;
+    position: relative;
+    display: block;
+    min-height: 170px;
+    box-sizing: border-box;
+    padding-top: 30px;
+    text-align: left;
+    img {
+      float: left;
+      width: 160px;
+    }
+
+  }
+}
+
+.advantages__item:not(:last-of-type) {
+  @include breakpoint(tablet) {
+    &:after {
+      position: absolute;
+      height: 1px;
+      width: 560px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      background-color: $grey_2;
+    }
   }
 }
 
@@ -27,6 +61,9 @@
   bottom: 0;
   left: 0;
   right: 0;
+  @include breakpoint(tablet) {
+    display: none;
+  }
 }
 
 .advantages__lbutton {
@@ -59,9 +96,18 @@
 .advantages__title {
   font-size: 30px;
   text-transform: uppercase;
+  @include breakpoint(tablet) {
+    margin-left: 160px;
+    padding-right: 35px;
+    margin-top: 0;
+  }
 }
 
 .advantages_description {
   font-size: 20px;
   line-height: 27px;
+  @include breakpoint(tablet) {
+    margin-left: 160px;
+    padding-right: 35px;
+  }
 }
