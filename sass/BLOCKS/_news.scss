@@ -1,9 +1,6 @@
 .news {
   position: relative;
-  padding-top: 70px;
-  padding-bottom: 28px;
-  padding-left:  16px;
-  padding-right: 16px;
+  padding: 70px 16px 28px 16px;
   text-align: center;
   background-color: $white_1;
   border-bottom: 1px solid $brown_3;
@@ -15,12 +12,18 @@
     left: 0;
     right: 0;
     height: 35px;
-    //border-left: 160px solid transparent;
-    //border-right: 160px solid transparent;
-    //border-top: 35px solid $black_1;
     clip-path: polygon(50% 100%, 0 20%, 0 0, 100% 0, 100% 20%);
     background-color: $black_1;
   }
+  @include breakpoint(tablet) {
+    &:before {
+      background-color: $grey_9;
+    }
+    border-bottom: 1px solid $brown_3;
+    text-align: left;
+    padding-bottom: 0;
+  }
+
 }
 
 .news__title {
@@ -28,12 +31,19 @@
   margin: 0;
   font-size: 30px;
   text-transform: uppercase;
+  @include breakpoint(tablet) {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
 }
 
 .news__list {
   list-style: none;
   padding-left: 0;
   margin-left: 0;
+  @include breakpoint(tablet) {
+    @include clearfix;
+  }
 }
 
 .news__item {
@@ -41,6 +51,7 @@
   padding-left: 65px;
   padding-bottom: 22px;
   text-align: left;
+  box-sizing: border-box;
   &:hover {
     color: $brown_1;
     text-decoration: underline;
@@ -64,6 +75,21 @@
   }
   &:not(:last-of-type) {
     border-bottom: 1px solid $brown_3;
+  }
+
+  @include breakpoint(tablet) {
+    &:first-child {
+      float: left;
+      width: 320px;
+    }
+    &:last-child {
+      float: right;
+      width: 320px;
+    }
+    &:not(:last-of-type) {
+      border-bottom: none;
+    }
+    padding-bottom: 0;
   }
 }
 
@@ -114,5 +140,12 @@
   &:active {
     background-color: $brown_7;
     color: $grey_5;
+  }
+  @include breakpoint(tablet) {
+    position: absolute;
+    right: 65px;
+    top: 62px;
+    width: 160px;
+    text-align: center;
   }
 }

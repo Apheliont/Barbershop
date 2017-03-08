@@ -124,21 +124,24 @@
             </div>
         </section>
         <section class="news">
-            <h2 class="news__title">Новости и акции</h2>
-            <ul class="news__list">
-                <li class="news__item">
-                    <time class="news__time-stamp" datetime="2017-11-19"><strong>29</strong>сент</time>
-                    <p class="news__description">Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.</p>
-                </li>
-                <li class="news__item">
-                    <time class="news__time-stamp" datetime="2017-11-19"><strong>19</strong>сент</time>
-                    <p class="news__description">В нашей команде пополнение, Борис «Маньяк» Стригунец,
-                        обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться!</p>
-                </li>
-            </ul>
-            <a class="news__show-all btn" href="#">Показать все</a>
+            <div class="inner_wrapper">
+                <h2 class="news__title">Новости и акции</h2>
+                <ul class="news__list">
+                    <li class="news__item">
+                        <time class="news__time-stamp" datetime="2017-11-19"><strong>29</strong>сент</time>
+                        <p class="news__description">Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.</p>
+                    </li>
+                    <li class="news__item">
+                        <time class="news__time-stamp" datetime="2017-11-19"><strong>19</strong>сент</time>
+                        <p class="news__description">В нашей команде пополнение, Борис «Маньяк» Стригунец,
+                            обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться!</p>
+                    </li>
+                </ul>
+                <a class="news__show-all btn" href="#">Показать все</a>
+            </div>
         </section>
         <section class="reviews">
+            <div class="inner_wrapper">
             <input class="reviews__rbutton-1" id="reviews_slide-1" type="radio" name="reviews" checked>
             <input class="reviews__rbutton-2" id="reviews_slide-2" type="radio" name="reviews">
             <input class="reviews__rbutton-3" id="reviews_slide-3" type="radio" name="reviews">
@@ -147,29 +150,37 @@
                 <label class="reviews__lbutton" for="reviews_slide-2"></label>
                 <label class="reviews__lbutton" for="reviews_slide-3"></label>
             </div>
-            <h2 class="reviews__title">Отзывы о нас</h2>
-            <div class="reviews__list">
-                <blockquote class="reviews__item">
-                <img class="reviews__author-photo" src="images/review_travis.png" width="50px" height="50px" alt="Фото комментатора">
-                <h3 class="reviews__author-name">Тревис Баркер</h3>
-                <p class="reviews__author-comment">Спасибо за лысину!
-                    Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
-                </p>
-            </blockquote>
-                <blockquote class="reviews__item">
-                    <img class="reviews__author-photo" src="images/review_someguy1.jpg" width="50px" height="50px" alt="Фото комментатора">
-                    <h3 class="reviews__author-name">Ник саймон</h3>
-                    <p class="reviews__author-comment">Новая философия!
-                        Вместе с новым стайлом у меня изменилось отношение к жизни! Парни то что вы делаетет это нереально!
-                    </p>
-                </blockquote>
-                <blockquote class="reviews__item">
-                    <img class="reviews__author-photo" src="images/review_someguy2.jpg" width="50px" height="50px" alt="Фото комментатора">
-                    <h3 class="reviews__author-name">Алекс Майлз</h3>
-                    <p class="reviews__author-comment">Это было круто!
-                        Смотри какую прелесть навел на моей голове мега крутой Иван Борода!
-                    </p>
-                </blockquote>
+                <h2 class="reviews__title">Отзывы о нас</h2>
+                <a class="reviews__leave-a-comment btn" href="#">Оставить свой</a>
+                <div class="reviews__list">
+                    <button class="reviews__list-btn reviews__list-btn-left" type="button"></button>
+                    <button class="reviews__list-btn reviews__list-btn-right" type="button"></button>
+                    <blockquote class="reviews__item">
+                        <img class="reviews__author-photo" src="images/review_travis.png"
+                             width="50px" height="50px" alt="Фото комментатора">
+                        <h3 class="reviews__author-name">Тревис Баркер</h3>
+                        <p class="reviews__author-comment">Спасибо за лысину!
+                            Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
+                        </p>
+                    </blockquote>
+                    <blockquote class="reviews__item">
+                        <img class="reviews__author-photo" src="images/review_someguy1.jpg"
+                             width="50px" height="50px" alt="Фото комментатора">
+                        <h3 class="reviews__author-name">Ник саймон</h3>
+                        <p class="reviews__author-comment">Новая философия!
+                            Вместе с новым стайлом у меня изменилось отношение к жизни!
+                            Парни то что вы делаетет это нереально!
+                        </p>
+                    </blockquote>
+                    <blockquote class="reviews__item">
+                        <img class="reviews__author-photo" src="images/review_someguy2.jpg"
+                             width="50px" height="50px" alt="Фото комментатора">
+                        <h3 class="reviews__author-name">Алекс Майлз</h3>
+                        <p class="reviews__author-comment">Это было круто!
+                            Смотри какую прелесть навел на моей голове мега крутой Иван Борода!
+                        </p>
+                    </blockquote>
+                </div>
             </div>
         </section>
     </main>

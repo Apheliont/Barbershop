@@ -4,7 +4,24 @@
   padding: 30px 16px 50px 16px;
   text-align: center;
   background-color: $white_1;
+  @include breakpoint(tablet) {
+    padding-top: 40px;
+  }
+}
 
+.reviews__leave-a-comment {
+  display: none;
+  @include breakpoint(tablet) {
+    position: absolute;
+    display: block;
+    width: 160px;
+    top: 40px;
+    right: 65px;
+    border: 1px solid $brown_3;
+    padding: 15px 0;
+    color: black;
+    font-weight: bold;
+  }
 }
 
 .reviews__title {
@@ -12,8 +29,73 @@
   margin: 0;
   font-size: 30px;
   text-transform: uppercase;
+  @include breakpoint(tablet) {
+    font-size: 40px;
+    text-align: left;
+  }
 }
 
+.reviews__list {
+  @include breakpoint(tablet) {
+    position: relative;
+    margin-top: 50px;
+    border: 1px solid $brown_3;
+  }
+}
+
+.reviews__list-btn {
+  display: none;
+  @include breakpoint(tablet) {
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    top: 0;
+    background: transparent;
+    border: none;
+  }
+}
+
+.reviews__list-btn:after {
+  @include breakpoint(tablet) {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: black;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+
+.reviews__list-btn-left {
+  @include breakpoint(tablet) {
+    left: 0;
+    border-right: 1px solid $brown_3;
+  }
+}
+.reviews__list-btn-left:after {
+  @include breakpoint(tablet) {
+    clip-path: polygon(100% 0, 100% 100%, 0% 50%);
+  }
+}
+
+.reviews__list-btn-right {
+  @include breakpoint(tablet) {
+    right: 0;
+    border-left: 1px solid $brown_3;
+  }
+}
+
+.reviews__list-btn-right:after {
+  @include breakpoint(tablet) {
+    clip-path: polygon(0 0, 0 100%, 100% 50%);
+  }
+}
 
 .reviews__item {
   display: none;
@@ -21,6 +103,10 @@
   padding-left: 65px;
   margin: 0;
   text-align: left;
+  @include breakpoint(tablet) {
+    box-sizing: border-box;
+    padding: 25px 80px 35px 188px;
+  }
 }
 
 .reviews__rbutton-1,
@@ -34,6 +120,13 @@
   bottom: 0;
   left: 0;
   right: 0;
+  @include breakpoint(tablet) {
+    width: 120px;
+    bottom: 40px;
+    margin: auto;
+    z-index: 100;
+    background-color: $white_1;
+  }
 }
 
 .reviews__lbutton {
@@ -65,11 +158,22 @@
   position: absolute;
   left: 0;
   top: 10px;
+  @include breakpoint(tablet) {
+    width: 80px;
+    height: 80px;
+    top: 35px;
+    left: 77px;
+    border-radius: 50%;
+    border: transparent;
+  }
 }
 
 .reviews__author-name {
   font-size: 24px;
   font-weight: bold;
+  @include breakpoint(tablet) {
+    margin-top: 0;
+  }
 }
 
 .reviews__author-comment {

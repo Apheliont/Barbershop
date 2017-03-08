@@ -14,9 +14,6 @@
     top: -1px;
     clip-path: polygon(50% 100%, 0 20%, 0 0, 100% 0, 100% 20%);
     background-color: $white_1;
-    //border-left: 160px solid transparent;
-    //border-right: 160px solid transparent;
-    //border-top: 35px solid $white_1;
   }
   &:after {
     content: "";
@@ -26,6 +23,18 @@
     top: 34px;
     height: 1px;
     background-color: $grey_7;
+  }
+}
+
+.page-footer:before {
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
+
+.page-footer:after {
+  @include breakpoint(tablet) {
+    display: none;
   }
 }
 
