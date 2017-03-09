@@ -11,6 +11,13 @@
 
 .reviews__leave-a-comment {
   display: none;
+  &:hover {
+    border-color: $brown_7;
+  }
+  &:active {
+    background-color: $brown_7;
+    color: $grey_5;
+  }
   @include breakpoint(tablet) {
     position: absolute;
     display: block;

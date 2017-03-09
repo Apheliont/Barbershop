@@ -24,6 +24,10 @@
     height: 1px;
     background-color: $grey_7;
   }
+  @include breakpoint(tablet) {
+    padding-top: 50px;
+    padding-bottom: 55px;
+  }
 }
 
 .page-footer:before {
@@ -47,6 +51,24 @@
   }
   p {
     line-height: 27px;
+    width: 70%;
+    margin: 20px auto;
+  }
+  @include breakpoint(tablet) {
+    text-align: left;
+    font-weight: normal;
+    p {
+      width: 100%;
+      margin: 10px 0 5px 0;
+    }
+  }
+}
+
+.page-footer__phone-word {
+  display: none;
+  @include breakpoint(tablet) {
+    display: inline;
+    text-transform: none;
   }
 }
 
@@ -70,6 +92,15 @@
     border-right: 1px solid $grey_7;
     &:hover {
       border-color: $grey_6;
+    }
+  }
+  @include breakpoint(tablet) {
+    border: 1px solid $grey_7;
+    &:first-of-type {
+      margin-right: -1px;
+    }
+    &:last-of-type {
+      margin-left: -1px;
     }
   }
 }
@@ -103,4 +134,21 @@
   color: white;
   font-weight: bold;
   @include footerButtonsAction();
+}
+
+.page-footer__phone {
+  @include breakpoint(tablet) {
+    border: none;
+    margin-bottom: 45px;
+    padding: 0;
+  }
+}
+
+.page-footer__copyright {
+  @include breakpoint(tablet) {
+    position: absolute;
+    top: 25px;
+    right: 52px;
+    width: 160px;
+  }
 }
