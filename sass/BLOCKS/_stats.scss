@@ -21,6 +21,7 @@
       top: 42px;
       width: 18px;
       height: 21px;
+      clip-path: url(#triangle);
       clip-path: polygon(100% 0, 0 0, 100% 100%);
       background-color: white;
     }

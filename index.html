@@ -12,6 +12,19 @@
 <div class="wrapper">
 <header class="page-header">
     <div class="page-header__logo">
+        <svg width="0" height="0">
+            <defs>
+                <clipPath id="triangle" clipPathUnits="objectBoundingBox">
+                    <polygon points="1 0, 0 0, 1 1" />
+                </clipPath>
+                <clipPath id="left" clipPathUnits="objectBoundingBox">
+                    <polygon points="1 0, 1 1, 0 0.5" />
+                </clipPath>
+                <clipPath id="right" clipPathUnits="objectBoundingBox">
+                    <polygon points="0 0, 0 1, 1 0.5" />
+                </clipPath>
+            </defs>
+        </svg>
     </div>
     <nav class="main-nav">
         <div class="inner_wrapper">
@@ -152,7 +165,9 @@
                 <h2 class="reviews__title">Отзывы о нас</h2>
                 <a class="reviews__leave-a-comment btn" href="#">Оставить свой</a>
                 <div class="reviews__list">
-                    <button class="reviews__list-btn reviews__list-btn-left" type="button"></button>
+                    <button class="reviews__list-btn reviews__list-btn-left" type="button">
+
+                    </button>
                     <button class="reviews__list-btn reviews__list-btn-right" type="button"></button>
                     <blockquote class="reviews__item">
                         <img class="reviews__author-photo" src="images/review_travis.png"

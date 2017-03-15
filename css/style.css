@@ -610,6 +610,7 @@ body {
       .main-nav__menu-item:last-child {
         margin-right: 0; }
       .main-nav__menu-item--active a {
+        height: 67px;
         border-bottom: 3px solid #826550;
         color: white; }
       .main-nav__menu-item:hover {
@@ -867,6 +868,7 @@ body {
         top: 42px;
         width: 18px;
         height: 21px;
+        clip-path: url(#triangle);
         clip-path: polygon(100% 0, 0 0, 100% 100%);
         background-color: white; } }
 
@@ -1296,6 +1298,7 @@ body {
 
 @media (min-width: 768px) {
   .reviews__list-btn-left:after {
+    clip-path: url(#left);
     clip-path: polygon(100% 0, 100% 100%, 0% 50%); } }
 
 @media (min-width: 768px) {
@@ -1305,6 +1308,7 @@ body {
 
 @media (min-width: 768px) {
   .reviews__list-btn-right:after {
+    clip-path: url(#right);
     clip-path: polygon(0 0, 0 100%, 100% 50%); } }
 
 .reviews__item {

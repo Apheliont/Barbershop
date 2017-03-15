@@ -101,6 +101,7 @@
 }
 .reviews__list-btn-left:after {
   @include breakpoint(tablet) {
+    clip-path: url(#left);
     clip-path: polygon(100% 0, 100% 100%, 0% 50%);
   }
 }
@@ -114,6 +115,7 @@
 
 .reviews__list-btn-right:after {
   @include breakpoint(tablet) {
+    clip-path: url(#right);
     clip-path: polygon(0 0, 0 100%, 100% 50%);
   }
 }
