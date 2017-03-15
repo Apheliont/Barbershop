@@ -14,6 +14,8 @@ var loginFormInputLogin = document.querySelector(".login-form__login");
 var loginFormInputPassword = document.querySelector(".login-form__password");
 var submitFormBtn = document.querySelector(".login-form__submit");
 var socialDescription = document.querySelectorAll(".social-list__link-description");
+var reviewLeftBtn = document.querySelector(".reviews__list-btn-left");
+var reviewRightBtn = document.querySelector(".reviews__list-btn-right");
 
 //Скрыть описание социальных ссылок. Вместо них иконки
 for(var i = 0; i < socialDescription.length; i++) {
@@ -73,6 +75,40 @@ menuButton.addEventListener('click', function() {
     }
     login.classList.toggle("main-nav__login-list--visible");
     closeButton.classList.toggle("main-nav__close--visible");
+});
+
+//левая кнопка перемотки отзывов в разделе riviews для tablet версии
+reviewLeftBtn.addEventListener('click', function(){
+    var radioButtonsList = document.querySelectorAll(".reviews input[type=radio]");
+    for (var i = 0; i < radioButtonsList.length; i++) {
+        if (radioButtonsList[i].checked && (i > 0)) {
+            radioButtonsList[i].checked = false;
+            radioButtonsList[i - 1].checked = true;
+            break;
+        } else if (radioButtonsList[i].checked)
+        {
+            radioButtonsList[i].checked = false;
+            radioButtonsList[radioButtonsList.length - 1].checked = true;
+            break;
+        }
+    }
+});
+
+//правая кнопка перемотки отзывов в разделе riviews для tablet версии
+reviewRightBtn.addEventListener('click', function(){
+    var radioButtonsList = document.querySelectorAll(".reviews input[type=radio]");
+    for (var i = 0; i < radioButtonsList.length; i++) {
+        if (radioButtonsList[i].checked && (i + 1 < radioButtonsList.length)) {
+            radioButtonsList[i].checked = false;
+            radioButtonsList[i + 1].checked = true;
+            break;
+        } else if (radioButtonsList[i].checked)
+        {
+            radioButtonsList[i].checked = false;
+            radioButtonsList[0].checked = true;
+            break;
+        }
+    }
 });
 
 closeButton.addEventListener('click', closeMenu);

@@ -53,13 +53,27 @@
 .reviews__list-btn {
   display: none;
   @include breakpoint(tablet) {
+    z-index: 100;
     display: block;
     position: absolute;
     width: 50px;
     height: 100%;
     top: 0;
+    outline: none;
     background: transparent;
     border: none;
+    &:hover {
+      &:after {
+        background-color: $brown_6;
+        transition-duration: 0.3s;
+      }
+    }
+    &:active {
+      background-color: $brown_7;
+      &:after {
+        background-color: $brown_6;
+      }
+    }
   }
 }
 

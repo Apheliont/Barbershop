@@ -12,7 +12,6 @@
   &--visible {
     display: block;
     animation: bounce 0.6s;
-
   }
 
   &--close {
@@ -23,6 +22,12 @@
   &--formerror {
     animation: formerror 0.4s;
   }
+  @include breakpoint(tablet) {
+    position: fixed;
+    width: 460px;
+    padding: 50px 62px 55px;
+    margin: auto;
+  }
 }
 
 .login-form__title {
@@ -30,12 +35,18 @@
   padding: 0;
   text-align: center;
   text-transform: uppercase;
+  @include breakpoint(tablet) {
+    font-size: 40px;
+  }
 }
 
 .login-form__description {
   text-align: center;
   margin-top: 25px;
   margin-bottom: 0;
+  @include breakpoint(tablet) {
+    margin-top: 15px;
+  }
 }
 
 .login-form__login-fieldset,
@@ -73,19 +84,22 @@
   &:hover {
     border-color: $brown_7;
   }
+  @include breakpoint(tablet) {
+    padding: 20px 45px 20px 25px;
+    font-size: 24px;
+  }
 }
 
-.login-form__login-icon {
-  position: absolute;
-  right: 20px;
-  top: 15px;
-}
-
+.login-form__login-icon,
 .login-form__password-icon {
   position: absolute;
   right: 20px;
   top: 15px;
+  @include breakpoint(tablet) {
+    top: 25px;
+  }
 }
+
 
 .login-form__remember-me {
   float: left;

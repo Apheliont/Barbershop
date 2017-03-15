@@ -510,10 +510,10 @@ body {
   @media (min-width: 768px) {
     .main-nav {
       position: absolute;
+      height: 70px;
       top: 0;
       left: 0;
       right: 0;
-      height: 70px;
       background-color: black; }
       .main-nav:after {
         content: "";
@@ -608,7 +608,16 @@ body {
       .main-nav__menu-item:nth-child(n + 1) {
         border: none; }
       .main-nav__menu-item:last-child {
-        margin-right: 0; } }
+        margin-right: 0; }
+      .main-nav__menu-item--active a {
+        border-bottom: 3px solid #826550;
+        color: white; }
+      .main-nav__menu-item:hover {
+        background: transparent; }
+        .main-nav__menu-item:hover a {
+          color: #826550; }
+      .main-nav__menu-item:active a {
+        color: #4e4e4e; } }
 
 .main-nav__login-list {
   position: absolute;
@@ -648,7 +657,17 @@ body {
       line-height: 70px;
       padding-left: 0;
       border: none;
-      background-color: transparent; } }
+      background-color: transparent; }
+      .main-nav__login-item:hover {
+        background: transparent; }
+        .main-nav__login-item:hover i {
+          color: #826550; }
+        .main-nav__login-item:hover a {
+          color: #826550; }
+      .main-nav__login-item:active i {
+        color: #4e4e4e; }
+      .main-nav__login-item:active a {
+        color: #4e4e4e; } }
 
 .main-nav__login {
   display: inline-block;
@@ -810,8 +829,7 @@ body {
   position: relative; }
   @media (min-width: 768px) {
     .page-header {
-      height: 465px;
-      z-index: -1; } }
+      height: 465px; } }
 
 .page-header__logo {
   height: 85px;
@@ -829,18 +847,28 @@ body {
 
 @media (min-width: 768px) {
   .stats {
-    margin-top: -185px;
-    z-index: 100; } }
+    position: relative;
+    margin-top: -185px; } }
 
 .stats__header {
-  text-align: center;
+  position: relative;
   min-height: 185px;
   box-sizing: border-box;
   padding: 30px 38px;
+  text-align: center;
   background-color: white; }
   @media (min-width: 768px) {
     .stats__header {
-      padding: 0; } }
+      padding: 0; }
+      .stats__header:before {
+        content: "";
+        position: absolute;
+        left: -17px;
+        top: 42px;
+        width: 18px;
+        height: 21px;
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+        background-color: white; } }
 
 .stats__title {
   margin: 0;
@@ -1068,10 +1096,12 @@ body {
     background-color: #242424; }
   @media (min-width: 768px) {
     .news {
+      padding-top: 85px;
       border-bottom: 1px solid #e5ddd5;
       text-align: left;
       padding-bottom: 0; }
       .news:before {
+        height: 42px;
         background-color: #353535; } }
 
 .news__title {
@@ -1175,7 +1205,7 @@ body {
     .news__show-all {
       position: absolute;
       right: 65px;
-      top: 62px;
+      top: 77px;
       width: 160px;
       text-align: center; } }
 
@@ -1228,13 +1258,22 @@ body {
   display: none; }
   @media (min-width: 768px) {
     .reviews__list-btn {
+      z-index: 100;
       display: block;
       position: absolute;
       width: 50px;
       height: 100%;
       top: 0;
+      outline: none;
       background: transparent;
-      border: none; } }
+      border: none; }
+      .reviews__list-btn:hover:after {
+        background-color: #978374;
+        transition-duration: 0.3s; }
+      .reviews__list-btn:active {
+        background-color: #d5c9bd; }
+        .reviews__list-btn:active:after {
+          background-color: #978374; } }
 
 @media (min-width: 768px) {
   .reviews__list-btn:after {
@@ -1364,17 +1403,29 @@ body {
     animation-timing-function: cubic-bezier(0.53, 0.11, 0.26, 1.03); }
   .login-form--formerror {
     animation: formerror 0.4s; }
+  @media (min-width: 768px) {
+    .login-form {
+      position: fixed;
+      width: 460px;
+      padding: 50px 62px 55px;
+      margin: auto; } }
 
 .login-form__title {
   margin: 0;
   padding: 0;
   text-align: center;
   text-transform: uppercase; }
+  @media (min-width: 768px) {
+    .login-form__title {
+      font-size: 40px; } }
 
 .login-form__description {
   text-align: center;
   margin-top: 25px;
   margin-bottom: 0; }
+  @media (min-width: 768px) {
+    .login-form__description {
+      margin-top: 15px; } }
 
 .login-form__login-fieldset,
 .login-form__password-fieldset,
@@ -1413,16 +1464,21 @@ body {
   .login-form__login:hover,
   .login-form__password:hover {
     border-color: #d5c9bd; }
+  @media (min-width: 768px) {
+    .login-form__login,
+    .login-form__password {
+      padding: 20px 45px 20px 25px;
+      font-size: 24px; } }
 
-.login-form__login-icon {
-  position: absolute;
-  right: 20px;
-  top: 15px; }
-
+.login-form__login-icon,
 .login-form__password-icon {
   position: absolute;
   right: 20px;
   top: 15px; }
+  @media (min-width: 768px) {
+    .login-form__login-icon,
+    .login-form__password-icon {
+      top: 25px; } }
 
 .login-form__remember-me {
   float: left; }

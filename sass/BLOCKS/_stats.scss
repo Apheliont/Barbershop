@@ -1,18 +1,29 @@
 .stats {
   @include breakpoint(tablet) {
+    position: relative;
     margin-top: -185px;
-    z-index: 100;
   }
 }
 
 .stats__header {
-  text-align: center;
+  position: relative;
   min-height: 185px;
   box-sizing: border-box;
   padding: 30px 38px;
+  text-align: center;
   background-color: white;
   @include breakpoint(tablet) {
     padding: 0;
+    &:before {
+      content: "";
+      position: absolute;
+      left: -17px;
+      top: 42px;
+      width: 18px;
+      height: 21px;
+      clip-path: polygon(100% 0, 0 0, 100% 100%);
+      background-color: white;
+    }
   }
 }
 
