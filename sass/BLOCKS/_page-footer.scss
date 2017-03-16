@@ -28,6 +28,9 @@
     padding-top: 50px;
     padding-bottom: 55px;
   }
+  @include breakpoint(desktop) {
+    min-height: 100px;
+  }
 }
 
 .page-footer:before {
@@ -55,12 +58,17 @@
     margin: 20px auto;
   }
   @include breakpoint(tablet) {
+    padding: 0;
     text-align: left;
     font-weight: normal;
     p {
       width: 100%;
       margin: 10px 0 5px 0;
     }
+  }
+  @include breakpoint(desktop) {
+    float: left;
+    width: 395px;
   }
 }
 
@@ -72,13 +80,29 @@
   }
 }
 
+.page-footer__social {
+  @include breakpoint(desktop) {
+    float: left;
+  }
+}
+
+.page-footer__social-title {
+  display: none;
+  @include breakpoint(desktop) {
+    display: block;
+    margin-top: 0;
+  }
+}
+
 .social-list {
   font-size: 0;
+  @include clearfix;
 }
 
 .social-list__link {
   position: relative;
   display: inline-block;
+  box-sizing: border-box;
   width: 33%;
   height: 97px;
   font-size: 18px;
@@ -87,20 +111,46 @@
   color: white;
   text-decoration: none;
   @include footerButtonsAction();
+
   &:nth-of-type(2) {
+    width: 33%;
     border-left: 1px solid $grey_7;
     border-right: 1px solid $grey_7;
     &:hover {
       border-color: $grey_6;
     }
   }
+  i:not(.fa-2x) {
+    display: none;
+  }
+
   @include breakpoint(tablet) {
+    width: 215px;
     border: 1px solid $grey_7;
     &:first-of-type {
       margin-right: -1px;
+      margin-left: -2px;
     }
+    &:nth-of-type(2) {
+      width: 216px;
+    }
+
     &:last-of-type {
       margin-left: -1px;
+      margin-right: -2px;
+    }
+  }
+  @include breakpoint(desktop) {
+    .fa-2x {
+      display: none;
+    }
+    i:not(.fa-2x) {
+      display: inline;
+    }
+    height: 52px;
+    width: 52px;
+    &:nth-of-type(2) {
+      width: 52px;
     }
   }
 }
@@ -121,10 +171,6 @@
   top: 0; left: 0; bottom: 0; right: 0;
 }
 
-.page-footer__copyright {
-  padding: 0 16px;
-}
-
 .page-footer__phone,
 .page-footer__copyright-link {
   border: 1px solid $grey_7;
@@ -138,6 +184,7 @@
 
 .page-footer__phone {
   @include breakpoint(tablet) {
+    display: inline;
     border: none;
     margin-bottom: 45px;
     padding: 0;
@@ -145,10 +192,19 @@
 }
 
 .page-footer__copyright {
+  padding: 0 16px;
   @include breakpoint(tablet) {
     position: absolute;
-    top: 25px;
-    right: 52px;
+    top: 0;
+    right: 0;
     width: 160px;
+    padding: 0;
   }
+}
+
+.page-footer__copyright-creator {
+  @include breakpoint(tablet) {
+    margin-top: 0;
+  }
+
 }

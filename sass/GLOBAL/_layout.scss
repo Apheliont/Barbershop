@@ -1,10 +1,17 @@
 .wrapper {
   @include wrapper;
+  background-color: $grey_9;
 }
 
 .inner_wrapper {
+  position: relative;
   @include breakpoint(tablet) {
     width: 640px;
+    margin: 0 auto;
+  }
+
+  @include breakpoint(desktop) {
+    width: 960px;
     margin: 0 auto;
   }
 }

@@ -3,6 +3,10 @@
     position: relative;
     margin-top: -185px;
   }
+  @include breakpoint(desktop) {
+    @include clearfix;
+    margin-top: -160px;
+  }
 }
 
 .stats__header {
@@ -26,6 +30,11 @@
       background-color: white;
     }
   }
+  @include breakpoint(desktop) {
+    float: left;
+    min-height: 318px;
+    width: 320px;
+  }
 }
 
 .stats__title {
@@ -45,6 +54,9 @@
     line-height: 40px;
     text-transform: none;
   }
+  @include breakpoint(desktop) {
+    min-height: 160px;
+  }
 }
 
 .stats__subtitle {
@@ -62,6 +74,9 @@
     font-size: 20px;
     line-height: 25px;
     text-align: left;
+  }
+  @include breakpoint(desktop) {
+    padding-top: 0;
   }
 }
 
@@ -123,6 +138,11 @@
       font-size: 20px;
     }
   }
+  @include breakpoint(desktop) {
+    float: right;
+    width: 640px;
+    min-height: 318px;
+  }
 }
 
 .stats__caption {
@@ -137,6 +157,10 @@
     top: -60px;
     left: 37px;
     background-color: transparent;
+  }
+  @include breakpoint(desktop) {
+    left: -290px;
+    top: 249px;
   }
 }
 

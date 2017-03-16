@@ -1,6 +1,6 @@
 @mixin breakpoint($point) {
   @if $point == desktop {
-    @media (min-width: 960px) { @content ; }
+    @media (min-width: 1200px) { @content ; }
   }
   @else if $point == tablet {
     @media (min-width: 768px) { @content ; }
@@ -17,7 +17,7 @@
   }
 
   @include breakpoint(desktop) {
-    width: 960px;
+    width: 1200px;
   }
 }
 
@@ -38,9 +38,4 @@
     color: $grey_8;
     background-color: $black_1;
   }
-}
-
-@mixin checkbox() {
-
-
 }

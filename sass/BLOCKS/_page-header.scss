@@ -3,6 +3,9 @@
   @include breakpoint(tablet) {
     height: 465px;
   }
+  @include breakpoint(desktop) {
+    height: 720px;
+  }
 }
 
 .page-header__logo {
@@ -18,5 +21,11 @@
     height: 395px;
     background: url("../images/logo_tablet.svg") no-repeat 50% 35px, url("../images/back_tablet.jpg") no-repeat;
     background-size: 40%, 100%;
+  }
+
+  @include breakpoint(desktop) {
+    height: 650px;
+    background: url("../images/logo_desktop.svg") no-repeat 50% 55px, url("../images/back_desktop.jpg") no-repeat;
+    background-size: 35%, 100%;
   }
 }

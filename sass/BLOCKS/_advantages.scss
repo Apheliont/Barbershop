@@ -9,6 +9,10 @@
   @include breakpoint(tablet) {
     background-color: $grey_9;
   }
+  @include breakpoint(desktop) {
+    @include clearfix;
+    margin-top: 80px;
+  }
 }
 
 .advantages__item {
@@ -31,7 +35,25 @@
       float: left;
       width: 160px;
     }
-
+  }
+  @include breakpoint(desktop) {
+    float: left;
+    display: block;
+    width: 320px;
+    min-height: 268px;
+    padding-top: 0;
+    text-align: center;
+    &:nth-of-type(2) {
+      border-left: 1px solid $grey_2;
+      border-right: 1px solid $grey_2;
+    }
+    img {
+      float: none;
+      display: block;
+      margin: 0 auto;
+      width: 93px;
+      height: 93px;
+    }
   }
 }
 
@@ -46,6 +68,11 @@
       left: 0;
       margin: auto;
       background-color: $grey_2;
+    }
+  }
+  @include breakpoint(desktop) {
+    &:after {
+      display: none;
     }
   }
 }
@@ -101,6 +128,12 @@
     padding-right: 35px;
     margin-top: 0;
   }
+
+  @include breakpoint(desktop) {
+    margin-left: 0;
+    padding-right: 0;
+    margin-top: 30px;
+  }
 }
 
 .advantages_description {
@@ -109,5 +142,11 @@
   @include breakpoint(tablet) {
     margin-left: 160px;
     padding-right: 35px;
+  }
+
+  @include breakpoint(desktop) {
+    margin-left: 0;
+    padding-right: 40px;
+    padding-left: 40px;
   }
 }
