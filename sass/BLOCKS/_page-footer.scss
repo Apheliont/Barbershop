@@ -68,7 +68,7 @@
   }
   @include breakpoint(desktop) {
     float: left;
-    width: 395px;
+    width: 405px;
   }
 }
 
@@ -193,11 +193,17 @@
 
 .page-footer__copyright {
   padding: 0 16px;
+
   @include breakpoint(tablet) {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 50px;
+    right: 48px;
     width: 160px;
+  }
+
+  @include breakpoint(desktop) {
+    position: static;
+    float: right;
     padding: 0;
   }
 }

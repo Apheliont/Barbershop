@@ -42,7 +42,7 @@ closeLoginFormBtn.addEventListener('click', function(){
 });
 
 // Кнопка отправки формы логина
-submitFormBtn.addEventListener('click', function() {
+submitFormBtn.addEventListener('click', function(event) {
     if(!(loginFormInputLogin.value && loginFormInputPassword.value)) {
         event.preventDefault();
         loginForm.classList.remove("login-form--formerror");
@@ -54,7 +54,7 @@ submitFormBtn.addEventListener('click', function() {
 });
 
 // Обработчик события на кнопке login в главном меню
-loginButton.addEventListener('click', function(){
+loginButton.addEventListener('click', function(event){
     event.preventDefault();
     loginForm.classList.add("login-form--visible");
     var storage = localStorage.getItem("login");

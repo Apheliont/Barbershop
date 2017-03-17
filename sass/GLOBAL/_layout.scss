@@ -1,10 +1,10 @@
 .wrapper {
   @include wrapper;
   background-color: $grey_9;
+  box-shadow: 0 0 20px 12px rgba(0,0,0,0.3);
 }
 
 .inner_wrapper {
-  position: relative;
   @include breakpoint(tablet) {
     width: 640px;
     margin: 0 auto;
