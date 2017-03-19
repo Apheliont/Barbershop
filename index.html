@@ -12,6 +12,7 @@
 <div class="wrapper">
 <header class="page-header">
     <div class="page-header__logo">
+        //special for FireFox triangle icons from svg
         <svg width="0" height="0">
             <defs>
                 <clipPath id="triangle" clipPathUnits="objectBoundingBox">
@@ -27,13 +28,13 @@
         </svg>
     </div>
     <nav class="main-nav">
-        <div class="inner_wrapper">
+        <div class="inner-wrapper">
             <button class="main-nav__toggle" type="button"></button>
             <button class="main-nav__close" type="button">&#10005;</button>
             <ul class="main-nav__menu-list">
                 <li class="main-nav__menu-item  main-nav__menu-item--active"><a>Главная</a></li>
                 <li class="main-nav__menu-item"><a href="#">Наши работы</a></li>
-                <li class="main-nav__menu-item"><a href="#">Записаться</a></li>
+                <li class="main-nav__menu-item"><a href="appointment.html">Записаться</a></li>
                 <li class="main-nav__menu-item"><a href="#">Контакты</a></li>
             </ul>
             <ul class="main-nav__login-list">
@@ -54,12 +55,13 @@
                 <i class="login-form__password-icon  fa  fa-lock" aria-hidden="true"></i>
             </fieldset>
             <fieldset class="login-form__options-fieldset">
-                <label class="login-form__remember-label"><input class="login-form__remember-me  checkbox" type="checkbox" name="remember-me">
+                <label class="login-form__remember-label">
+                    <input class="login-form__remember-me  checkbox" type="checkbox" name="remember-me">
                 <span></span>Запомнить меня</label>
                 <a class="login-form__forgot-password" href="#">Я забыл пароль!</a>
             </fieldset>
             <fieldset class="login-form__buttons-fieldset">
-                <button class="login-form__submit btn" type="submit">Войти</button>
+                <button class="login-form__submit submit-btn btn" type="submit">Войти</button>
                 <button class="login-form__close btn" type="reset">Закрыть</button>
             </fieldset>
         </form>
@@ -67,14 +69,14 @@
 </header>
     <main>
         <section class="stats">
-            <div class="inner_wrapper">
+            <div class="inner-wrapper">
                 <header class="stats__header">
                     <h1 class="stats__title">Стрижка у нас<br> это выгодно!</h1>
                     <p class="stats__subtitle">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
                 </header>
             </div>
                 <div class="stats__list-wrapper">
-                    <div class="inner_wrapper">
+                    <div class="inner-wrapper">
                         <table class="stats__list">
                             <caption class="stats__caption"><sup>*</sup> — приведенные данные ложь</caption>
                             <tbody>
@@ -108,7 +110,7 @@
                 <label class="advantages__lbutton" for="advantages_slide-2"></label>
                 <label class="advantages__lbutton" for="advantages_slide-3"></label>
             </div>
-            <div class="inner_wrapper">
+            <div class="inner-wrapper">
                 <article class="advantages__item">
                     <img src="images/advantages_1.svg" alt="Быстро">
                     <h1 class="advantages__title">Быстро</h1>
@@ -136,7 +138,7 @@
             </div>
         </section>
         <section class="news">
-            <div class="inner_wrapper">
+            <div class="inner-wrapper">
                 <div class="news__header">
                     <h2 class="news__title">Новости и акции</h2>
                     <a class="news__show-all btn" href="#">Показать все</a>
@@ -166,7 +168,7 @@
                 <label class="reviews__lbutton" for="reviews_slide-2"></label>
                 <label class="reviews__lbutton" for="reviews_slide-3"></label>
             </div>
-            <div class="inner_wrapper">
+            <div class="inner-wrapper">
                 <div class="reviews__header">
                     <h2 class="reviews__title">Отзывы о нас</h2>
                     <a class="reviews__leave-a-comment btn" href="#">Оставить свой</a>
@@ -209,7 +211,7 @@
         </section>
     </main>
     <footer class="page-footer">
-        <div class="inner_wrapper">
+        <div class="inner-wrapper">
             <section class="page-footer__address">
                 <h3>Барбершоп Бородинский</h3>
                 <p>г. Санкт-Петербург, ул. Большая Конюшенная 19/8</p>

@@ -1,3 +1,4 @@
+//GLOBAL
 @import "normalize";
 @import "variables";
 @import "mixins";
@@ -6,14 +7,27 @@
 @import "global/buttons";
 @import "global/keyframes";
 
-//partials
-@import "blocks/main-nav";
-@import "blocks/page-footer";
-@import "blocks/page-header";
-@import "blocks/social-list";
-@import "blocks/stats";
-@import "blocks/advantages";
-@import "blocks/news";
-@import "blocks/reviews";
-@import "blocks/login-form";
-@import "blocks/page";
+//BEM BLOCKS
+  //common blocks
+  @import "blocks/common/main-nav";
+  @import "blocks/common/page-footer";
+  @import "blocks/common/page-header";
+  @import "blocks/common/login-form";
+  @import "blocks/common/social-list";
+  @import "blocks/common/page";
+
+  //index page
+  @import "blocks/index/social-list";
+  @import "blocks/index/stats";
+  @import "blocks/index/advantages";
+  @import "blocks/index/news";
+  @import "blocks/index/reviews";
+
+  //--appointment page
+  @import "blocks/appointment/appointment";
+  @import "blocks/appointment/appointment-form/appointment-form";
+  @import "blocks/appointment/appointment-form/beard-type";
+  @import "blocks/appointment/appointment-form/contacts";
+  @import "blocks/appointment/appointment-form/fullname";
+  @import "blocks/appointment/appointment-form/info";
+  @import "blocks/appointment/appointment-form/options";

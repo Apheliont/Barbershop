@@ -4,7 +4,22 @@
   box-shadow: 0 0 20px 12px rgba(0,0,0,0.3);
 }
 
-.inner_wrapper {
+.inner-wrapper {
+  @include breakpoint(tablet) {
+    width: 640px;
+    margin: 0 auto;
+  }
+
+  @include breakpoint(desktop) {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+
+.inner-wrapper-full {
+  width: 280px;
+  margin: 0 auto;
+
   @include breakpoint(tablet) {
     width: 640px;
     margin: 0 auto;
