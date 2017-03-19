@@ -1,0 +1,16 @@
+.contacts {
+  border: none;
+  padding: 0;
+  margin-bottom: 32px;
+  label {
+    display: none;
+  }
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 18px;
+  }
+  input:not(:last-child) {
+    margin-bottom: 7px;
+  }
+}

@@ -1,0 +1,141 @@
+.page-footer {
+  position: relative;
+  background-color: $black_2;
+  color: white;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 25px;
+  &:before {
+    content: "";
+    position: absolute;
+    height: 35px;
+    left: 0;
+    right: 0;
+    top: -1px;
+    clip-path: polygon(50% 100%, 0 20%, 0 0, 100% 0, 100% 20%);
+    background-color: $white_1;
+  }
+  // ОШИБКА ДИЗАЙНЕРА??! 2 макета, 1 с линией другой без оба с одинаковым футером
+  //&:after {
+  //  content: "";
+  //  position: absolute;
+  //  left: 0;
+  //  right: 0;
+  //  top: 34px;
+  //  height: 1px;
+  //  background-color: $grey_7;
+  //}
+
+  @include breakpoint(tablet) {
+    padding-top: 50px;
+    padding-bottom: 55px;
+  }
+  @include breakpoint(desktop) {
+    min-height: 100px;
+  }
+}
+
+.page-footer:before {
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
+
+.page-footer:after {
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
+
+.page-footer__address {
+  padding: 0 16px;
+  margin-bottom: 25px;
+  h3 {
+    padding: 0;
+    margin: 0;
+  }
+  p {
+    line-height: 27px;
+    width: 70%;
+    margin: 20px auto;
+  }
+  @include breakpoint(tablet) {
+    padding: 0;
+    text-align: left;
+    font-weight: normal;
+    p {
+      width: 100%;
+      margin: 10px 0 5px 0;
+    }
+  }
+  @include breakpoint(desktop) {
+    float: left;
+    width: 405px;
+  }
+}
+
+.page-footer__phone-word {
+  display: none;
+  @include breakpoint(tablet) {
+    display: inline;
+    text-transform: none;
+  }
+}
+
+.page-footer__social {
+  @include breakpoint(desktop) {
+    float: left;
+  }
+}
+
+.page-footer__social-title {
+  display: none;
+  @include breakpoint(desktop) {
+    display: block;
+    margin-top: 0;
+  }
+}
+
+.page-footer__phone,
+.page-footer__copyright-link {
+  border: 1px solid $grey_7;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  color: white;
+  font-weight: bold;
+  @include footerButtonsAction();
+}
+
+.page-footer__phone {
+  @include breakpoint(tablet) {
+    display: inline;
+    border: none;
+    margin-bottom: 45px;
+    padding: 0;
+  }
+}
+
+.page-footer__copyright {
+  padding: 0 16px;
+
+  @include breakpoint(tablet) {
+    position: absolute;
+    top: 50px;
+    right: 48px;
+    width: 160px;
+  }
+
+  @include breakpoint(desktop) {
+    position: static;
+    float: right;
+    padding: 0;
+  }
+}
+
+.page-footer__copyright-creator {
+  @include breakpoint(tablet) {
+    margin-top: 0;
+  }
+
+}

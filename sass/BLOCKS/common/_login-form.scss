@@ -1,0 +1,136 @@
+.login-form {
+  display: none;
+  position: absolute;
+  z-index: 200;
+  top: 135px;
+  left: 0;
+  right: 0;
+  min-height: 410px;
+  box-sizing: border-box;
+  padding: 35px 16px;
+  background-color: $white_1;
+  &--visible {
+    display: block;
+    animation: bounce 0.6s;
+  }
+
+  &--close {
+    animation: back 0.6s;
+    animation-timing-function: cubic-bezier(.53,.11,.26,1.03);
+  }
+
+  &--formerror {
+    animation: formerror 0.4s;
+  }
+  @include breakpoint(tablet) {
+    position: fixed;
+    width: 460px;
+    padding: 50px 62px 55px;
+    margin: auto;
+    box-shadow: 0 0 20px 15px rgba(0,0,0,.4);
+  }
+}
+
+.login-form__title {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+  @include breakpoint(tablet) {
+    font-size: 40px;
+  }
+}
+
+.login-form__description {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 0;
+  @include breakpoint(tablet) {
+    margin-top: 15px;
+  }
+}
+
+.login-form__login-fieldset,
+.login-form__password-fieldset,
+.login-form__buttons-fieldset,
+.login-form__options-fieldset {
+  @include clearfix();
+  position: relative;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.login-form__login-fieldset {
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.login-form__options-fieldset {
+  margin: 25px 0;
+}
+
+.login-form__remember-label {
+  position: relative;
+  padding-left: 50px;
+}
+
+.login-form__login,
+.login-form__password {
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid $brown_3;
+  padding: 12px 45px 12px 15px;
+  &:hover {
+    border-color: $brown_7;
+  }
+  @include breakpoint(tablet) {
+    padding: 20px 45px 20px 25px;
+    font-size: 24px;
+  }
+}
+
+.login-form__login-icon,
+.login-form__password-icon {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  @include breakpoint(tablet) {
+    top: 25px;
+  }
+}
+
+
+.login-form__remember-me {
+  float: left;
+}
+
+.login-form__forgot-password {
+  float: right;
+  color: black;
+}
+
+.login-form__submit {
+  float: left;
+  width: 130px;
+}
+
+.login-form__close {
+  float: right;
+  width: 130px;
+  padding: 16px 0;
+  background-color: $white_1;
+  color: black;
+  border: 1px solid $brown_3;
+  font-weight: bold;
+  font-family: "PT Sans Narrow", sans-serif;
+  &:hover {
+    border-color: $brown_7;
+  }
+  &:active {
+    background-color: $brown_7;
+    color: $grey_5;
+  }
+}
+

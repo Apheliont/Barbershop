@@ -1,0 +1,244 @@
+.reviews {
+  position: relative;
+  min-height: 250px;
+  padding: 30px 16px 50px 16px;
+  text-align: center;
+  background-color: $white_1;
+  @include breakpoint(tablet) {
+    padding-top: 40px;
+  }
+}
+
+.reviews__header {
+  @include clearfix;
+  margin-bottom: 35px;
+}
+
+.reviews__leave-a-comment {
+  display: none;
+  &:hover {
+    border-color: $brown_7;
+  }
+  &:active {
+    background-color: $brown_7;
+    color: $grey_5;
+  }
+  @include breakpoint(tablet) {
+    float: right;
+    position: static;
+    display: block;
+    width: 160px;
+    border: 1px solid $brown_3;
+    padding: 15px 0;
+    color: black;
+    font-weight: bold;
+  }
+
+}
+
+.reviews__title {
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+  text-transform: uppercase;
+  @include breakpoint(tablet) {
+    float: left;
+    font-size: 40px;
+    text-align: left;
+  }
+  @include breakpoint(desktop) {
+    margin-left: 70px;
+  }
+}
+
+.reviews__list {
+  @include breakpoint(tablet) {
+    @include clearfix;
+    position: relative;
+    margin-top: 50px;
+  }
+}
+
+.reviews__list-btn {
+  display: none;
+  @include breakpoint(tablet) {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 160px;
+    outline: none;
+    background: transparent;
+    border: 1px solid $brown_3;
+    &:hover {
+      border-color: $brown_7;
+    }
+    &:active {
+      background-color: $brown_7;
+      &:after {
+        background-color: $brown_6;
+      }
+    }
+  }
+}
+
+.reviews__list-btn:after {
+  @include breakpoint(tablet) {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: black;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+
+.reviews__list-btn-left {
+  @include breakpoint(tablet) {
+    float: left;
+    border-right: 1px solid $brown_3;
+  }
+}
+.reviews__list-btn-left:after {
+  @include breakpoint(tablet) {
+    clip-path: url(#left);
+    clip-path: polygon(100% 0, 100% 100%, 0% 50%);
+  }
+}
+
+.reviews__list-btn-right {
+  @include breakpoint(tablet) {
+    float: left;
+    border-left: 1px solid $brown_3;
+  }
+}
+
+.reviews__list-btn-right:after {
+  @include breakpoint(tablet) {
+    clip-path: url(#right);
+    clip-path: polygon(0 0, 0 100%, 100% 50%);
+  }
+}
+
+.reviews__item {
+  display: none;
+  position: relative;
+  padding-left: 65px;
+  margin: 0;
+  text-align: left;
+  @include breakpoint(tablet) {
+    float: left;
+    width: 540px;
+    height: 160px;
+    box-sizing: border-box;
+    border-top: 1px solid $brown_3;
+    border-bottom: 1px solid $brown_3;
+    padding: 25px 30px 35px 135px;
+  }
+  @include breakpoint(desktop) {
+    padding-left: 300px;
+    margin: 0 20px;
+    width: 820px;
+    border: 1px solid $brown_3;
+  }
+}
+
+.reviews__rbutton-1,
+.reviews__rbutton-2,
+.reviews__rbutton-3 {
+  display: none;
+}
+
+.reviews__controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  @include breakpoint(tablet) {
+    width: 120px;
+    bottom: 40px;
+    margin: auto;
+    z-index: 100;
+    background-color: $white_1;
+  }
+}
+
+.reviews__lbutton {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  cursor: pointer;
+  transform: rotate(45deg);
+  border: 1px solid $grey_4;
+  &:nth-of-type(2) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.reviews__rbutton-1:checked ~ .reviews__controls .reviews__lbutton:nth-of-type(1),
+.reviews__rbutton-2:checked ~ .reviews__controls .reviews__lbutton:nth-of-type(2),
+.reviews__rbutton-3:checked ~ .reviews__controls .reviews__lbutton:nth-of-type(3) {
+  background-color: $black_2;
+}
+
+.reviews__rbutton-1:checked ~ .inner-wrapper .reviews__item:nth-of-type(1),
+.reviews__rbutton-2:checked ~ .inner-wrapper .reviews__item:nth-of-type(2),
+.reviews__rbutton-3:checked ~ .inner-wrapper .reviews__item:nth-of-type(3) {
+  display: block;
+}
+
+.reviews__author-photo-block {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  padding: 0;
+  margin: 0;
+  width: 50px;
+  height: 50px;
+
+  overflow: hidden;
+  img {
+    height: 100%;
+    margin-left: -25%;
+  }
+  @include breakpoint(tablet) {
+    width: 70px;
+    height: 70px;
+    top: 50px;
+    left: 40px;
+    border-radius: 50%;
+    border: transparent;
+  }
+  @include breakpoint(desktop) {
+    top: 0;
+    left: 0;
+    width: 245px;
+    height: 100%;
+    border-radius: 0;
+    img {
+      margin-left: 0;
+    }
+  }
+}
+
+
+.reviews__author-name {
+  font-size: 24px;
+  font-weight: bold;
+  @include breakpoint(tablet) {
+    margin-top: 0;
+  }
+}
+
+.reviews__author-comment {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: bold;
+}

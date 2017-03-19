@@ -1,0 +1,186 @@
+.stats {
+  @include breakpoint(tablet) {
+    position: relative;
+    margin-top: -185px;
+  }
+  @include breakpoint(desktop) {
+    @include clearfix;
+    margin-top: -160px;
+  }
+}
+
+.stats__header {
+  position: relative;
+  min-height: 185px;
+  box-sizing: border-box;
+  padding: 30px 38px;
+  text-align: center;
+  background-color: white;
+  @include breakpoint(tablet) {
+    padding: 0;
+    &:before {
+      content: "";
+      position: absolute;
+      left: -17px;
+      top: 42px;
+      width: 18px;
+      height: 21px;
+      clip-path: url(#triangle);
+      clip-path: polygon(100% 0, 0 0, 100% 100%);
+      background-color: white;
+    }
+  }
+  @include breakpoint(desktop) {
+    float: left;
+    min-height: 318px;
+    width: 320px;
+  }
+}
+
+.stats__title {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  @include breakpoint(tablet) {
+    float: left;
+    width: 320px;
+    box-sizing: border-box;
+    padding-left: 35px;
+    padding-top: 30px;
+    text-align: left;
+    font-size: 40px;
+    line-height: 40px;
+    text-transform: none;
+  }
+  @include breakpoint(desktop) {
+    min-height: 160px;
+  }
+}
+
+.stats__subtitle {
+  margin-top: 25px;
+  margin-bottom: 0;
+  padding: 0;
+  @include breakpoint(tablet) {
+    float: right;
+    width: 320px;
+    box-sizing: border-box;
+    padding-top: 35px;
+    padding-left: 35px;
+    padding-right: 70px;
+    margin: 0;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: left;
+  }
+  @include breakpoint(desktop) {
+    padding-top: 0;
+  }
+}
+
+.stats__list-wrapper {
+  @include breakpoint(tablet) {
+    background-color: $grey_9;
+  }
+}
+
+.stats__list {
+  position: relative;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  color: white;
+  tr:nth-of-type(even) {
+    background-color: $grey_2;
+  }
+  tr:nth-of-type(odd) {
+    background-color: $grey_1;
+  }
+
+  @include breakpoint(tablet) {
+    tr {
+      height: 160px;
+      width: 320px;
+      box-sizing: border-box;
+      padding-left: 35px;
+      padding-top: 28px;
+    }
+    tr:nth-of-type(even) {
+      float: right;
+
+    }
+    tr:nth-of-type(odd) {
+      float: left;
+    }
+    tr:first-child,
+    tr:last-child {
+      background-color: $grey_1;
+    }
+    tr:nth-child(2) {
+      background-color: $grey_2;
+    }
+    tr:nth-child(3) {
+      background-color: $grey_9;
+    }
+    .stats__price,
+    .stats__description {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+    .stats__price {
+      font-size: 72px;
+      padding-left: 0;
+    }
+    .stats__description {
+      font-size: 20px;
+    }
+  }
+  @include breakpoint(desktop) {
+    float: right;
+    width: 640px;
+    min-height: 318px;
+  }
+}
+
+.stats__caption {
+  caption-side: bottom;
+  height: 38px;
+  box-sizing: border-box;
+  padding-top: 18px;
+  background-color: $black_1;
+  color: $grey_3;
+  @include breakpoint(tablet) {
+    position: absolute;
+    top: -60px;
+    left: 37px;
+    background-color: transparent;
+  }
+  @include breakpoint(desktop) {
+    left: -290px;
+    top: 249px;
+  }
+}
+
+.stats__price {
+  width: 60%;
+  height: 78px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 16px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.stats__description {
+  width: 40%;
+  height: 78px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 16px;
+  text-align: right;
+  font-size: 18px;
+  font-weight: normal;
+}

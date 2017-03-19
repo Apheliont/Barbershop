@@ -1,0 +1,152 @@
+.advantages {
+  position: relative;
+  min-height: 375px;
+  box-sizing: border-box;
+  padding: 23px 40px;
+  text-align: center;
+  background-color: $black_1;
+  color: white;
+  @include breakpoint(tablet) {
+    background-color: $grey_9;
+  }
+  @include breakpoint(desktop) {
+    @include clearfix;
+    margin-top: 80px;
+  }
+}
+
+.advantages__item {
+  display: none;
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 93px;
+    height: 93px;
+  }
+  @include breakpoint(tablet) {
+    @include clearfix;
+    position: relative;
+    display: block;
+    min-height: 170px;
+    box-sizing: border-box;
+    padding-top: 30px;
+    text-align: left;
+    img {
+      float: left;
+      width: 160px;
+    }
+  }
+  @include breakpoint(desktop) {
+    float: left;
+    display: block;
+    width: 320px;
+    min-height: 268px;
+    padding-top: 0;
+    text-align: center;
+    &:nth-of-type(2) {
+      border-left: 1px solid $grey_2;
+      border-right: 1px solid $grey_2;
+    }
+    img {
+      float: none;
+      display: block;
+      margin: 0 auto;
+      width: 93px;
+      height: 93px;
+    }
+  }
+}
+
+.advantages__item:not(:last-of-type) {
+  @include breakpoint(tablet) {
+    &:after {
+      position: absolute;
+      height: 1px;
+      width: 560px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      background-color: $grey_2;
+    }
+  }
+  @include breakpoint(desktop) {
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.advantages__rbutton-1,
+.advantages__rbutton-2,
+.advantages__rbutton-3 {
+  display: none;
+}
+
+.advantages__controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
+
+.advantages__lbutton {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  cursor: pointer;
+  transform: rotate(45deg);
+  border: 1px solid $grey_4;
+  &:nth-of-type(2) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.advantages__rbutton-1:checked ~ .advantages__controls .advantages__lbutton:nth-of-type(1),
+.advantages__rbutton-2:checked ~ .advantages__controls .advantages__lbutton:nth-of-type(2),
+.advantages__rbutton-3:checked ~ .advantages__controls .advantages__lbutton:nth-of-type(3) {
+  background-color: white;
+}
+
+
+
+.advantages__rbutton-1:checked ~ .inner-wrapper .advantages__item:nth-of-type(1),
+.advantages__rbutton-2:checked ~ .inner-wrapper .advantages__item:nth-of-type(2),
+.advantages__rbutton-3:checked ~ .inner-wrapper .advantages__item:nth-of-type(3) {
+  display: block;
+}
+
+.advantages__title {
+  font-size: 30px;
+  text-transform: uppercase;
+  @include breakpoint(tablet) {
+    margin-left: 160px;
+    padding-right: 35px;
+    margin-top: 0;
+  }
+
+  @include breakpoint(desktop) {
+    margin-left: 0;
+    padding-right: 0;
+    margin-top: 30px;
+  }
+}
+
+.advantages_description {
+  font-size: 20px;
+  line-height: 27px;
+  @include breakpoint(tablet) {
+    margin-left: 160px;
+    padding-right: 35px;
+  }
+
+  @include breakpoint(desktop) {
+    margin-left: 0;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}

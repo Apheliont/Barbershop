@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/d3fcf98910.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="javascript/script.js"></script>
+    <title>Barbershop Borodinski</title>
+</head>
+<body class="page">
+<div class="wrapper">
+    <header class="page-header">
+        <div class="page-header__logo">
+        </div>
+        <nav class="main-nav">
+            <div class="inner-wrapper">
+                <button class="main-nav__toggle" type="button"></button>
+                <button class="main-nav__close" type="button">&#10005;</button>
+                <ul class="main-nav__menu-list">
+                    <li class="main-nav__menu-item"><a href="index.html">Главная</a></li>
+                    <li class="main-nav__menu-item"><a href="#">Наши работы</a></li>
+                    <li class="main-nav__menu-item main-nav__menu-item--active"><a href="#">Записаться</a></li>
+                    <li class="main-nav__menu-item"><a href="#">Контакты</a></li>
+                </ul>
+                <ul class="main-nav__login-list">
+                    <li class="main-nav__login-item"><i class="fa fa-sign-in" aria-hidden="true"></i><a class="main-nav__login" href="#">Вход</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="login-form">
+            <h2 class="login-form__title">Личный кабинет</h2>
+            <p class="login-form__description">Введите свой логин и пароль, чтобы войти</p>
+            <form class="login-form__form" action="#" method="POST">
+                <fieldset class="login-form__login-fieldset">
+                    <input class="login-form__login" type="text" name="login" placeholder="Логин" required>
+                    <i class="login-form__login-icon  fa  fa-user" aria-hidden="true"></i>
+                </fieldset>
+                <fieldset class="login-form__password-fieldset">
+                    <input class="login-form__password" type="password" name="password" placeholder="Пароль" required>
+                    <i class="login-form__password-icon  fa  fa-lock" aria-hidden="true"></i>
+                </fieldset>
+                <fieldset class="login-form__options-fieldset">
+                    <label class="login-form__remember-label"><input class="login-form__remember-me  checkbox" type="checkbox" name="remember-me">
+                        <span></span>Запомнить меня</label>
+                    <a class="login-form__forgot-password" href="#">Я забыл пароль!</a>
+                </fieldset>
+                <fieldset class="login-form__buttons-fieldset">
+                    <button class="login-form__submit submit-btn btn" type="submit">Войти</button>
+                    <button class="login-form__close btn" type="reset">Закрыть</button>
+                </fieldset>
+            </form>
+        </div>
+    </header>
+    <main>
+    <section class="appointment">
+        <div class="inner-wrapper-full">
+            <h2 class="appointment__title">Запись на стрижку</h2>
+            <form class="appointment-form" action="#" method="POST">
+
+                <fieldset class="fullname">
+                    <label for="surname">Фамилия</label>
+                    <input type="text" name="surname" id="surname" placeholder="Фамилия">
+                    <label for="name">Имя</label>
+                    <input type="text" name="name" id="name" placeholder="Имя">
+                    <label for="middleName">Отчество</label>
+                    <input type="text" name="middleName" id="middleName" placeholder="Отчество">
+                </fieldset>
+
+                <fieldset class="contacts">
+                    <label for="phone">Контактный телефон</label>
+                    <input type="text" name="phone" id="phone" placeholder="Контактный телефон">
+
+                    <label for="email">Контактный e-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Контактный e-mail">
+                </fieldset>
+
+                <fieldset class="info">
+                    <label for="info">Доп. информация для мастера</label>
+                    <textarea name="info" id="info" placeholder="Доп. информация для мастера"></textarea>
+                </fieldset>
+
+                <fieldset class="beard-type">
+                    <legend>Выберите модель бороды:</legend>
+
+                    <label>
+                        <input class="radio" type="radio" name="beardType" value="admiral" checked>
+                        <span></span>Адмирал
+                        <img src="images/admiral.svg" alt="Борода адмирала">
+                    </label>
+
+                    <label>
+                        <input class="radio" type="radio" name="beardType" value="lumberjack">
+                        <span></span>Лесоруб
+                        <img src="images/lumberjack.svg" alt="Борода лесоруба">
+                    </label>
+
+                    <label>
+                        <input class="radio" type="radio" name="beardType" value="polarExplorer">
+                        <span></span>Полярник
+                        <img src="images/polarExplorer.svg" alt="Борода полярника">
+                    </label>
+
+                    <label>
+                        <input class="radio" type="radio" name="beardType" value="boyar">
+                        <span></span>Боярин
+                        <img src="images/boyar.svg" alt="Борода боярина">
+                    </label>
+
+                    <label>
+                        <input class="radio" type="radio" name="beardType" value="wiseman">
+                        <span></span>Мудрец
+                        <img src="images/wiseman.svg" alt="Борода мудреца">
+                    </label>
+                </fieldset>
+
+                <fieldset class="options">
+                    <legend>Дополнительные услуги:</legend>
+
+                    <label>
+                        <input class="checkbox" type="checkbox" name="options" value="paint">
+                        <span></span>Покрасить бороду
+                    </label>
+
+                    <label>
+                        <input class="checkbox" type="checkbox" name="options" value="mustache">
+                        <span></span>Накрутить усы
+                    </label>
+
+                    <label>
+                        <input class="checkbox" type="checkbox" name="options" value="comb">
+                        <span></span>Причесать бороду
+                    </label>
+
+                    <label>
+                        <input class="checkbox" type="checkbox" name="options" value="temple">
+                        <span></span>Подровнять виски
+                    </label>
+
+                    <label>
+                        <input class="checkbox" type="checkbox" name="options" value="gray">
+                        <span></span>Убрать седину
+                    </label>
+
+                    <label>
+                        <input class="checkbox" type="checkbox" name="options" value="baldness">
+                        <span></span>Отполировать лысину
+                    </label>
+                </fieldset>
+
+                <button class="submit-btn btn" type="submit">Отправить заявку</button>
+            </form>
+        </div>
+    </section>
+    </main>
+    <footer class="page-footer">
+        <div class="inner-wrapper">
+            <section class="page-footer__address">
+                <h3>Барбершоп Бородинский</h3>
+                <p>г. Санкт-Петербург, ул. Большая Конюшенная 19/8</p>
+                <a class="page-footer__phone btn" href="tel: +7(812)555-66-66"><span class="page-footer__phone-word">Тел.:</span> +7(812)555-66-66</a>
+            </section>
+            <section class="page-footer__social">
+                <p class="page-footer__social-title">Давайте дружить!</p>
+                <span class="social-list">
+                    <a class="social-list__link" href="http://vk.com">
+                        <i class="fa fa-2x fa-vk social-list__icon" aria-hidden="true"></i>
+                        <i class="fa fa-vk social-list__icon" aria-hidden="true"></i>
+                        <span class="social-list__link-description">vk</span></a>
+                    <a class="social-list__link" href="http://facebook.com">
+                        <i class="fa fa-2x fa-facebook social-list__icon" aria-hidden="true"></i>
+                        <i class="fa fa-facebook social-list__icon" aria-hidden="true"></i>
+                        <span class="social-list__link-description">facebook</span></a>
+                    <a class="social-list__link" href="http://instagram.com">
+                        <i class="fa fa-2x fa-instagram social-list__icon" aria-hidden="true"></i>
+                        <i class="fa fa-instagram social-list__icon" aria-hidden="true"></i>
+                        <span class="social-list__link-description">instagram</span></a>
+                </span>
+            </section>
+            <section class="page-footer__copyright">
+                <p class="page-footer__copyright-creator">Разработано:</p>
+                <a class="page-footer__copyright-link btn" href="#">html Academy</a>
+            </section>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

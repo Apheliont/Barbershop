@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 76 130.24094"
+   height="130.24094"
+   width="76"
+   xml:space="preserve"
+   id="svg2"
+   version="1.1"><metadata
+     id="metadata8"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+     id="defs6"><clipPath
+       id="clipPath18"
+       clipPathUnits="userSpaceOnUse"><path
+         id="path16"
+         d="M 0,97.681 H 57 V 0 H 0 Z" /></clipPath></defs><g
+     transform="matrix(1.3333333,0,0,-1.3333333,0,130.24093)"
+     id="g10"><g
+       id="g12"><g
+         clip-path="url(#clipPath18)"
+         id="g14"><g
+           transform="translate(34.4404,72.7217)"
+           id="g20"><path
+             id="path22"
+             style="fill:#826550;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="M 0,0 C -2.793,-1.174 -5.354,0.709 -5.879,0.719 -5.897,0.72 -5.922,0.713 -5.939,0.713 -5.957,0.713 -5.981,0.72 -6,0.719 -6.526,0.709 -9.086,-1.175 -11.879,0 -12.664,3.583 -9.483,4.042 -5.939,3.904 -2.395,4.042 0.785,3.582 0,0 m 16.681,9.719 c -0.396,5.453 -0.611,10.852 -2.521,15.24 -0.764,0 -1.529,-7.313 -2.279,-10.92 -1.478,-7.14 -3.715,-8.283 -4.44,-8.28 -0.859,3.857 -4.384,4.241 -7.8,5.88 -1.207,0.579 -2.311,1.051 -3.602,1.199 -0.666,0.077 -1.287,-0.102 -1.979,-0.116 -0.691,0.015 -1.314,0.193 -1.98,0.116 -1.291,-0.149 -2.394,-0.62 -3.601,-1.199 -3.417,-1.639 -6.942,-2.022 -7.801,-5.88 -0.725,-0.004 -2.963,1.14 -4.44,8.28 -0.75,3.606 -1.514,10.92 -2.279,10.92 -1.91,-4.389 -2.125,-9.787 -2.52,-15.24 -0.879,-23.538 -5.879,-36.288 -5.879,-47.159 0,-26.067 11.708,-35.282 28.5,-35.282 16.791,0 28.5,9.215 28.5,35.282 0.001,10.871 -4.999,23.621 -5.879,47.159" /></g></g></g></g></svg>
