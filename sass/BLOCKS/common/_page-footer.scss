@@ -104,7 +104,18 @@
   padding: 15px 0;
   color: white;
   font-weight: bold;
-  @include footerButtonsAction();
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: none;
+
+  &:hover {
+    border-color: $grey_6;
+  }
+  &:active {
+    border-color: transparent;
+    color: $grey_8;
+    background-color: $black_1;
+  }
 }
 
 .page-footer__phone {
@@ -122,7 +133,7 @@
   @include breakpoint(tablet) {
     position: absolute;
     top: 50px;
-    right: 48px;
+    right: 50px;
     width: 160px;
   }
 

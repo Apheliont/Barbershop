@@ -33,11 +33,11 @@
             <p class="login-form__description">Введите свой логин и пароль, чтобы войти</p>
             <form class="login-form__form" action="#" method="POST">
                 <fieldset class="login-form__login-fieldset">
-                    <input class="login-form__login" type="text" name="login" placeholder="Логин" required>
+                    <input class="login-form__login form-field" type="text" name="login" placeholder="Логин" required>
                     <i class="login-form__login-icon  fa  fa-user" aria-hidden="true"></i>
                 </fieldset>
                 <fieldset class="login-form__password-fieldset">
-                    <input class="login-form__password" type="password" name="password" placeholder="Пароль" required>
+                    <input class="login-form__password form-field" type="password" name="password" placeholder="Пароль" required>
                     <i class="login-form__password-icon  fa  fa-lock" aria-hidden="true"></i>
                 </fieldset>
                 <fieldset class="login-form__options-fieldset">
@@ -46,8 +46,8 @@
                     <a class="login-form__forgot-password" href="#">Я забыл пароль!</a>
                 </fieldset>
                 <fieldset class="login-form__buttons-fieldset">
-                    <button class="login-form__submit submit-btn btn" type="submit">Войти</button>
-                    <button class="login-form__close btn" type="reset">Закрыть</button>
+                    <button class="login-form__submit submit-btn" type="submit">Войти</button>
+                    <button class="login-form__close neutral-btn" type="reset">Закрыть</button>
                 </fieldset>
             </form>
         </div>
@@ -55,32 +55,36 @@
     <main>
     <section class="appointment">
         <div class="inner-wrapper-full">
-            <h2 class="appointment__title">Запись на стрижку</h2>
+            <div class="appointment-header">
+                <h2 class="appointment-header__title">Запись на стрижку</h2>
+                <a class="appointment-header__backToIndexBtn neutral-btn" href="index.html">На главную</a>
+            </div>
+
             <form class="appointment-form" action="#" method="POST">
 
-                <fieldset class="fullname">
+                <fieldset class="appointment-fullname">
                     <label for="surname">Фамилия</label>
-                    <input type="text" name="surname" id="surname" placeholder="Фамилия">
+                    <input class="form-field" type="text" name="surname" id="surname" placeholder="Фамилия">
                     <label for="name">Имя</label>
-                    <input type="text" name="name" id="name" placeholder="Имя">
+                    <input class="form-field" type="text" name="name" id="name" placeholder="Имя">
                     <label for="middleName">Отчество</label>
-                    <input type="text" name="middleName" id="middleName" placeholder="Отчество">
+                    <input class="form-field" type="text" name="middleName" id="middleName" placeholder="Отчество">
                 </fieldset>
 
-                <fieldset class="contacts">
+                <fieldset class="appointment-contacts">
                     <label for="phone">Контактный телефон</label>
-                    <input type="text" name="phone" id="phone" placeholder="Контактный телефон">
+                    <input class="form-field" type="text" name="phone" id="phone" placeholder="Контактный телефон">
 
                     <label for="email">Контактный e-mail</label>
-                    <input type="email" name="email" id="email" placeholder="Контактный e-mail">
+                    <input class="form-field" type="email" name="email" id="email" placeholder="Контактный e-mail">
                 </fieldset>
 
-                <fieldset class="info">
+                <fieldset class="appointment-info">
                     <label for="info">Доп. информация для мастера</label>
-                    <textarea name="info" id="info" placeholder="Доп. информация для мастера"></textarea>
+                    <textarea class="form-field" name="info" id="info" placeholder="Доп. информация для мастера"></textarea>
                 </fieldset>
 
-                <fieldset class="beard-type">
+                <fieldset class="appointment-beard-type">
                     <legend>Выберите модель бороды:</legend>
 
                     <label>
@@ -114,7 +118,7 @@
                     </label>
                 </fieldset>
 
-                <fieldset class="options">
+                <fieldset class="appointment-options">
                     <legend>Дополнительные услуги:</legend>
 
                     <label>
@@ -148,7 +152,7 @@
                     </label>
                 </fieldset>
 
-                <button class="submit-btn btn" type="submit">Отправить заявку</button>
+                <button class="appointment-submit submit-btn" type="submit">Отправить заявку</button>
             </form>
         </div>
     </section>
@@ -179,7 +183,7 @@
             </section>
             <section class="page-footer__copyright">
                 <p class="page-footer__copyright-creator">Разработано:</p>
-                <a class="page-footer__copyright-link btn" href="#">html Academy</a>
+                <a class="page-footer__copyright-link" href="#">html Academy</a>
             </section>
         </div>
     </footer>

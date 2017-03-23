@@ -1,0 +1,18 @@
+.form-field {
+  font-size: 18px;
+  outline: none;
+  box-sizing: border-box;
+  border: 1px solid $brown_3;
+
+  &:hover {
+    border-color: $brown_7;
+  }
+
+  &:focus {
+    border-color: $grey_5;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 24px;
+  }
+}

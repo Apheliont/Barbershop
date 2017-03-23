@@ -1,0 +1,26 @@
+.appointment-header {
+  @include clearfix;
+  padding-top: 60px;
+  margin-bottom: 65px;
+}
+
+.appointment-header__title {
+  margin: 0;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  @include breakpoint(tablet) {
+    float: left;
+    font-size: 40px;
+  }
+}
+
+.appointment-header__backToIndexBtn {
+  display: none;
+  float: right;
+  width: 160px;
+  text-align: center;
+  @include breakpoint(tablet) {
+    display: block;
+  }
+}

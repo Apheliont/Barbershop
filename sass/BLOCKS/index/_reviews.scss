@@ -16,24 +16,11 @@
 
 .reviews__leave-a-comment {
   display: none;
-  &:hover {
-    border-color: $brown_7;
-  }
-  &:active {
-    background-color: $brown_7;
-    color: $grey_5;
-  }
   @include breakpoint(tablet) {
-    float: right;
-    position: static;
-    display: block;
-    width: 160px;
-    border: 1px solid $brown_3;
-    padding: 15px 0;
-    color: black;
-    font-weight: bold;
+  display: block;
+  float: right;
+  width: 160px;
   }
-
 }
 
 .reviews__title {

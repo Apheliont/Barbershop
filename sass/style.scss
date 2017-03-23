@@ -5,6 +5,7 @@
 @import "global/layout";
 @import "global/fonts";
 @import "global/buttons";
+@import "global/form-field";
 @import "global/keyframes";
 
 //BEM BLOCKS
@@ -25,9 +26,11 @@
 
   //--appointment page
   @import "blocks/appointment/appointment";
+  @import "blocks/appointment/appointment-header";
   @import "blocks/appointment/appointment-form/appointment-form";
-  @import "blocks/appointment/appointment-form/beard-type";
-  @import "blocks/appointment/appointment-form/contacts";
-  @import "blocks/appointment/appointment-form/fullname";
-  @import "blocks/appointment/appointment-form/info";
-  @import "blocks/appointment/appointment-form/options";
+  @import "blocks/appointment/appointment-form/appointment-beard-type";
+  @import "blocks/appointment/appointment-form/appointment-contacts";
+  @import "blocks/appointment/appointment-form/appointment-fullname";
+  @import "blocks/appointment/appointment-form/appointment-info";
+  @import "blocks/appointment/appointment-form/appointment-options";
+  @import "blocks/appointment/appointment-form/appointment-submit";

@@ -1,4 +1,4 @@
-.info {
+.appointment-info {
   border: none;
   padding: 0;
   margin-bottom: 40px;
@@ -11,6 +11,7 @@
     resize: vertical;
     box-sizing: border-box;
     padding: 15px 18px;
+    border: 1px solid $brown_3;
   }
   input:not(:last-child) {
     margin-bottom: 7px;

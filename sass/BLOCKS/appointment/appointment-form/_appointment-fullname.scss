@@ -1,0 +1,27 @@
+.appointment-fullname {
+  border: none;
+  padding: 0;
+  margin-bottom: 32px;
+  label {
+    display: none;
+  }
+  input {
+    width: 100%;
+    padding: 15px 18px;
+  }
+  input:not(:last-child) {
+    margin-bottom: 7px;
+  }
+
+  @include breakpoint(tablet) {
+    @include clearfix;
+    input {
+      float: left;
+      width: 33.33%;
+    }
+    input:nth-of-type(2) {
+      border-left: none;
+      border-right: none;
+    }
+  }
+}
