@@ -12,4 +12,17 @@
   input:not(:last-child) {
     margin-bottom: 7px;
   }
+
+  @include breakpoint(desktop) {
+    @include clearfix;
+    input {
+      float: left;
+      width: 460px;
+    }
+
+    input:last-child {
+      float: right;
+      //margin-right: 35px;
+    }
+  }
 }

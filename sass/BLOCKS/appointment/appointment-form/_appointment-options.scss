@@ -37,4 +37,10 @@
       font-size: 24px;
     }
   }
+
+  @include breakpoint(desktop) {
+    label {
+      min-width: 28%;
+    }
+  }
 }

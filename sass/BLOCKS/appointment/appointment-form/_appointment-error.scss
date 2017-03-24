@@ -1,0 +1,31 @@
+.appointment-error {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: 30%;
+  margin: auto;
+  min-height: 315px;
+  width: 320px;
+  padding: 55px 70px 45px;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: 0 10px 25px 5px rgba(0,0,0,.7);
+
+  &--visible {
+    display: block;
+  }
+}
+
+.appointment-error__title {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 40px;
+  text-align: center;
+}
+
+.appointment-error__description {
+  text-align: center;
+  margin-bottom: 40px;
+}

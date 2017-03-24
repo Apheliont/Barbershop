@@ -1,8 +1,12 @@
 .form-field {
-  font-size: 18px;
-  outline: none;
   box-sizing: border-box;
+  outline: none;
   border: 1px solid $brown_3;
+  font-size: 18px;
+
+  &::-webkit-input-placeholder {
+    color: lighten(black, 60%);
+  }
 
   &:hover {
     border-color: $brown_7;
@@ -14,5 +18,17 @@
 
   @include breakpoint(tablet) {
     font-size: 24px;
+  }
+}
+
+.form-field--red {
+  border-color: red;
+
+  &:hover {
+    border-color: red;
+  }
+
+  &:focus {
+    border-color: red;
   }
 }

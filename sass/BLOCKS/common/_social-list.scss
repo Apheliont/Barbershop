@@ -9,8 +9,7 @@
   width: 33.33%;
   height: 97px;
   font-size: 18px;
-  border-top: 1px solid $grey_7;
-  border-bottom: 1px solid $grey_7;
+  border: 1px solid $grey_7;
   color: white;
   text-decoration: none;
 
@@ -23,29 +22,8 @@
     background-color: $black_1;
   }
 
-  &:nth-of-type(2) {
-    border-left: 1px solid $grey_7;
-    border-right: 1px solid $grey_7;
-  }
-
   i:not(.fa-2x) {
     display: none;
-  }
-
-  @include breakpoint(tablet) {
-    &:first-of-type {
-      border-left: 1px solid $grey_7;
-      &:active {
-        border-color: transparent;
-      }
-    }
-
-    &:last-of-type {
-      border-right: 1px solid $grey_7;
-      &:active {
-        border-color: transparent;
-      }
-    }
   }
 
   @include breakpoint(desktop) {
@@ -57,8 +35,10 @@
     }
     height: 52px;
     width: 52px;
-    &:nth-of-type(2) {
-      width: 52px;
+    border: 1px solid $grey_7;
+
+    &:not(:last-child) {
+      margin-right: 5px;
     }
   }
 }

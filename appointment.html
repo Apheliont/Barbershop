@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://use.fontawesome.com/d3fcf98910.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="javascript/script.js"></script>
+    <script defer src="javascript/common.js"></script>
+    <script defer src="javascript/appointment.js"></script>
     <title>Barbershop Borodinski</title>
 </head>
 <body class="page">
@@ -62,21 +63,36 @@
 
             <form class="appointment-form" action="#" method="POST">
 
+                <div class="appointment-error">
+                    <h2 class="appointment-error__title">Неудача</h2>
+                    <p class="appointment-error__description">Что-то пошло не так.
+                        Проверьте поля формы выделенные красным.
+                    </p>
+                    <button class="submit-btn" type="button">Ок</button>
+                </div>
+
+                <div class="appointment-success">
+                    <h2 class="appointment-success__title">Это успех!</h2>
+                    <p class="appointment-success__description">Ваша заявка отправлена. Ожидайте, мы свяжемся с вами как только будет минутка.
+                    </p>
+                    <button class="submit-btn" type="button">Закрыть окно</button>
+                </div>
+
                 <fieldset class="appointment-fullname">
                     <label for="surname">Фамилия</label>
-                    <input class="form-field" type="text" name="surname" id="surname" placeholder="Фамилия">
+                    <input class="form-field" type="text" name="surname" id="surname" placeholder="Фамилия" required>
                     <label for="name">Имя</label>
-                    <input class="form-field" type="text" name="name" id="name" placeholder="Имя">
+                    <input class="form-field" type="text" name="name" id="name" placeholder="Имя" required>
                     <label for="middleName">Отчество</label>
                     <input class="form-field" type="text" name="middleName" id="middleName" placeholder="Отчество">
                 </fieldset>
 
                 <fieldset class="appointment-contacts">
                     <label for="phone">Контактный телефон</label>
-                    <input class="form-field" type="text" name="phone" id="phone" placeholder="Контактный телефон">
+                    <input class="form-field" type="tel" name="phone" id="phone" placeholder="Контактный телефон" required>
 
                     <label for="email">Контактный e-mail</label>
-                    <input class="form-field" type="email" name="email" id="email" placeholder="Контактный e-mail">
+                    <input class="form-field" type="email" name="email" id="email" placeholder="Контактный e-mail" required>
                 </fieldset>
 
                 <fieldset class="appointment-info">

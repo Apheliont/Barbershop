@@ -17,5 +17,13 @@
       background-color: $white_1;
     }
   }
+
+  @include breakpoint(desktop) {
+    margin-top: -270px;
+    &:before {
+      top: -64px;
+      height: 65px;
+    }
+  }
 }
 

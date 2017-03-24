@@ -1,3 +1,7 @@
 .appointment-submit {
-  font-size: 24px;
+    font-size: 18px;
+
+  @include breakpoint(tablet) {
+    font-size: 24px;
+  }
 }

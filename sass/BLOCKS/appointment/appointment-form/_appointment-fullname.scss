@@ -19,9 +19,19 @@
       float: left;
       width: 33.33%;
     }
-    input:nth-of-type(2) {
-      border-left: none;
-      border-right: none;
+  }
+
+  @include breakpoint(desktop) {
+    input {
+      width: 295px;
+    }
+
+    input:not(:last-child) {
+      margin-right: 35px;
+    }
+
+    input:last-child {
+      float: right;
     }
   }
 }
