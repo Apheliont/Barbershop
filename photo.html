@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/d3fcf98910.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="javascript/common.js"></script>
+    <title>Barbershop Borodinski</title>
+</head>
+<body class="page">
+<div class="wrapper">
+    <header class="page-header">
+        <div class="page-header__logo">
+        </div>
+        <nav class="main-nav">
+            <div class="inner-wrapper">
+                <button class="main-nav__toggle" type="button"></button>
+                <button class="main-nav__close" type="button">&#10005;</button>
+                <ul class="main-nav__menu-list">
+                    <li class="main-nav__menu-item"><a href="index.html">Главная</a></li>
+                    <li class="main-nav__menu-item"><a href="#">Наши работы</a></li>
+                    <li class="main-nav__menu-item main-nav__menu-item--active"><a href="#">Записаться</a></li>
+                    <li class="main-nav__menu-item"><a href="#">Контакты</a></li>
+                </ul>
+                <ul class="main-nav__login-list">
+                    <li class="main-nav__login-item"><i class="fa fa-sign-in" aria-hidden="true"></i><a class="main-nav__login" href="#">Вход</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="login-form">
+            <h2 class="login-form__title">Личный кабинет</h2>
+            <p class="login-form__description">Введите свой логин и пароль, чтобы войти</p>
+            <form class="login-form__form" action="#" method="POST">
+                <fieldset class="login-form__login-fieldset">
+                    <input class="login-form__login form-field" type="text" name="login" placeholder="Логин" required>
+                    <i class="login-form__login-icon  fa  fa-user" aria-hidden="true"></i>
+                </fieldset>
+                <fieldset class="login-form__password-fieldset">
+                    <input class="login-form__password form-field" type="password" name="password" placeholder="Пароль" required>
+                    <i class="login-form__password-icon  fa  fa-lock" aria-hidden="true"></i>
+                </fieldset>
+                <fieldset class="login-form__options-fieldset">
+                    <label class="login-form__remember-label"><input class="login-form__remember-me  checkbox" type="checkbox" name="remember-me">
+                        <span></span>Запомнить меня</label>
+                    <a class="login-form__forgot-password" href="#">Я забыл пароль!</a>
+                </fieldset>
+                <fieldset class="login-form__buttons-fieldset">
+                    <button class="login-form__submit submit-btn" type="submit">Войти</button>
+                    <button class="login-form__close neutral-btn" type="reset">Закрыть</button>
+                </fieldset>
+            </form>
+        </div>
+    </header>
+    <main>
+        <section class="work-list">
+            <div class="inner-wrapper-full">
+                <div class="work-list__header">
+                    <h2 class="work-list__title">Наши работы</h2>
+                    <a class="work-list__backToIndexBtn neutral-btn" href="index.html">На главную</a>
+                </div>
+                    <figure class="work">
+                        <div class="work__work-of-month">Работа месяца</div>
+                        <img src="images/photo-1-mobile.jpg" alt="Работа месяца">
+                        <figcaption class="work__caption">
+                            <h3 class="work__author-name">Лжепётр Мчиславский</h3>
+                            <p class="work__author-comment">Где я только ни стригся,
+                                но так как делаете это вы — не умеет никто другой!
+                                Еще раз спасибо и до скорого!
+                            </p>
+                            <ul class="done-list">
+                                <li class="done-list__haircut">Стрижка</li>
+                                <li class="done-list__shaving">Бритье</li>
+                                <li class="done-list__mustache">Усы</li>
+                            </ul>
+                        </figcaption>
+                    </figure>
+
+                <figure class="work">
+                    <img class="work__photo" src="images/photo-2-mobile.jpg" alt="Фото 2">
+                    <img class="work__photo work__photo--tablet" src="images/photo-2-tablet.jpg" alt="Фото 2">
+                    <figcaption class="work__caption">
+                        <h3 class="work__author-name">Саша Мальцев</h3>
+                        <p class="work__author-comment">Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
+                        </p>
+                        <ul class="done-list">
+                            <li class="done-list__haircut">Стрижка</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+
+                <figure class="work">
+                    <img class="work__photo" src="images/photo-3-mobile.jpg" alt="Фото 3">
+                    <img class="work__photo work__photo--tablet" src="images/photo-3-tablet.jpg" alt="Фото 3">
+                    <figcaption class="work__caption">
+                        <h3 class="work__author-name">Владимир Иваныч</h3>
+                        <p class="work__author-comment">К зимнему сезону — готов!
+                        </p>
+                        <ul class="done-list">
+                            <li class="done-list__shaving">Борода</li>
+                            <li class="done-list__mustache">Усы</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+
+                <figure class="work">
+                    <img class="work__photo" src="images/photo-4-mobile.jpg" alt="Фото 4">
+                    <img class="work__photo work__photo--tablet" src="images/photo-4-tablet.jpg" alt="Фото 4">
+                    <figcaption class="work__caption">
+                        <h3 class="work__author-name">Винстон Синий</h3>
+                        <p class="work__author-comment">Как только заростаю и волосы начинают мешать видеть
+                            — бегом в Бородинский!
+                        </p>
+                        <ul class="done-list">
+                            <li class="done-list__haircut">Стрижка</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="price-list">
+            <div class="inner-wrapper-full">
+                <h2 class="price-list__title">Прейскурант</h2>
+                <table class="price-list__list">
+                        <tr>
+                            <td class="price-list__number">1</td>
+                            <td class="price-list__description">Классическая стрижка
+                                <span class="price-list__wash-hair"><br>(с мытьем головы)</span></td>
+                            <td class="price-list__wash-hair price-list__wash-hair--tablet">с мытьем головы</td>
+                            <td class="price-list__price">1500 руб.</td>
+                        </tr>
+                        <tr>
+                            <td class="price-list__number">2</td>
+                            <td class="price-list__description">Современный вариант
+                                <span class="price-list__wash-hair"><br>(с мытьем головы)</span></td>
+                            <td class="price-list__wash-hair price-list__wash-hair--tablet">с мытьем головы</td>
+                            <td class="price-list__price">1500 руб.</td>
+                        </tr>
+                        <tr>
+                            <td class="price-list__number">3</td>
+                            <td class="price-list__description">Индивидуальный подход
+                                <span class="price-list__wash-hair"><br>(с мытьем головы)</span></td>
+                            <td class="price-list__wash-hair price-list__wash-hair--tablet">с мытьем головы</td>
+                            <td class="price-list__price">2000 руб.</td>
+                        </tr>
+                        <tr>
+                            <td class="price-list__number">4</td>
+                            <td class="price-list__description">Бритьё головы
+                                <span class="price-list__wash-hair"><br>(без мытья)</span></td>
+                            <td class="price-list__wash-hair price-list__wash-hair--tablet">без мытья</td>
+                            <td class="price-list__price">500 руб.</td>
+                        </tr>
+                        <tr>
+                            <td class="price-list__number">5</td>
+                            <td class="price-list__description">Бритьё головы
+                                <span class="price-list__wash-hair"><br>(с мытьем головы)</span></td>
+                            <td class="price-list__wash-hair price-list__wash-hair--tablet">с мытьем головы</td>
+                            <td class="price-list__price">1000 руб.</td>
+                        </tr>
+                </table>
+                <div class="discount-hours">
+                    <img class="discount-hours__clock" src="images/clock.svg" alt="Часы скидок">
+                    <p class="discount-hours__description">С 10:00 до 14:00 скидка 20%</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="inner-wrapper">
+            <section class="page-footer__address">
+                <h3>Барбершоп Бородинский</h3>
+                <p>г. Санкт-Петербург, ул. Большая Конюшенная 19/8</p>
+                <a class="page-footer__phone btn" href="tel: +7(812)555-66-66"><span class="page-footer__phone-word">Тел.:</span> +7(812)555-66-66</a>
+            </section>
+            <section class="page-footer__social">
+                <p class="page-footer__social-title">Давайте дружить!</p>
+                <span class="social-list">
+                    <a class="social-list__link" href="http://vk.com">
+                        <i class="fa fa-2x fa-vk social-list__icon" aria-hidden="true"></i>
+                        <i class="fa fa-vk social-list__icon" aria-hidden="true"></i>
+                        <span class="social-list__link-description">vk</span></a>
+                    <a class="social-list__link" href="http://facebook.com">
+                        <i class="fa fa-2x fa-facebook social-list__icon" aria-hidden="true"></i>
+                        <i class="fa fa-facebook social-list__icon" aria-hidden="true"></i>
+                        <span class="social-list__link-description">facebook</span></a>
+                    <a class="social-list__link" href="http://instagram.com">
+                        <i class="fa fa-2x fa-instagram social-list__icon" aria-hidden="true"></i>
+                        <i class="fa fa-instagram social-list__icon" aria-hidden="true"></i>
+                        <span class="social-list__link-description">instagram</span></a>
+                </span>
+            </section>
+            <section class="page-footer__copyright">
+                <p class="page-footer__copyright-creator">Разработано:</p>
+                <a class="page-footer__copyright-link" href="#">html Academy</a>
+            </section>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

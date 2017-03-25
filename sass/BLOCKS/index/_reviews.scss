@@ -4,8 +4,25 @@
   padding: 30px 16px 50px 16px;
   text-align: center;
   background-color: $white_1;
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 100;
+    bottom: -34px;
+    left: 0;
+    right: 0;
+    height: 35px;
+    clip-path: polygon(50% 100%, 0 20%, 0 0, 100% 0, 100% 20%);
+    background-color: $white_1;
+  }
+
   @include breakpoint(tablet) {
     padding-top: 40px;
+
+    &:after {
+      display: none;
+    }
   }
 }
 

@@ -1,0 +1,79 @@
+.work {
+  position: relative;
+  margin: 0 0 20px;
+  padding: 0;
+
+  @include breakpoint(tablet) {
+
+  }
+}
+
+.work__work-of-month {
+  position: absolute;
+  width: 155px;
+  left: 0;
+  bottom: 290px;
+  text-align: center;
+  display: block;
+  padding: 15px 0;
+  background-color: $brown_1;
+  color: white;
+  font-weight: bold;
+  font-family: "PT Sans Narrow", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: -9px;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    clip-path: polygon(0 0, 100% 0, 10% 50%, 100% 100%, 0 100%);
+    background-color: $brown_1;
+  }
+}
+
+.work__photo {
+
+  &--tablet {
+    display: none;
+  }
+
+  @include breakpoint(tablet) {
+    display: none;
+    &--tablet {
+      display: block;
+    }
+  }
+}
+
+.work__caption {
+  margin-top: -5px;
+  padding: 22px 20px 0;
+  box-sizing: border-box;
+  border: 1px solid $brown_3;
+
+  @include breakpoint(tablet) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 370px;
+    padding: 40px;
+    margin: 0;
+  }
+}
+
+.work__author-name {
+  margin: 0;
+  font-size: 24px;
+}
+
+.work__author-comment {
+  @include breakpoint(tablet) {
+    margin-bottom: auto;
+  }
+}

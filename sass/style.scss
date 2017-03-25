@@ -26,7 +26,6 @@
 
   //--appointment page
   @import "blocks/appointment/appointment";
-  @import "blocks/appointment/appointment-header";
   @import "blocks/appointment/appointment-form/appointment-form";
   @import "blocks/appointment/appointment-form/appointment-beard-type";
   @import "blocks/appointment/appointment-form/appointment-contacts";
@@ -36,3 +35,11 @@
   @import "blocks/appointment/appointment-form/appointment-submit";
   @import "blocks/appointment/appointment-form/appointment-error";
   @import "blocks/appointment/appointment-form/appointment-success";
+
+//--photo page
+  @import "blocks/photo/work-list";
+  @import "blocks/photo/work";
+  @import "blocks/photo/price-list";
+  @import "blocks/photo/done-list";
+  @import "blocks/photo/discount-hours";
+

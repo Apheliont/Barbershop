@@ -83,7 +83,7 @@
   }
   &--visible {
     display: block;
-    animation: menu 0.5s;
+    //animation: menu 0.5s;
   }
 
   &:nth-child(n + 1) {
@@ -149,7 +149,7 @@
   display: none;
   &--visible {
     display: block;
-    animation: menu 0.5s;
+    //animation: menu 0.5s;
   }
   @include breakpoint(tablet) {
     display: block;

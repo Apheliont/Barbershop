@@ -1,0 +1,38 @@
+.done-list {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    display: inline-block;
+    text-transform: uppercase;
+  }
+
+  li:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  @include breakpoint(tablet) {
+    //position: absolute;
+    //bottom: 0;
+    //right: 0;
+  }
+}
+
+.done-list__haircut {
+  padding: 7px 0 0 30px;
+  background: url("../images/haircut.svg") no-repeat 0 5px;
+  background-size: 25%;
+}
+
+.done-list__shaving {
+  padding: 7px 0 0 30px;
+  background: url("../images/shaving.svg") no-repeat 0 5px;
+  background-size: 30%;
+}
+
+.done-list__mustache {
+  margin-left: -10px;
+  padding: 7px 0 0 50px;
+  background: url("../images/mustache.svg") no-repeat 0 10px;
+  background-size: 55%;
+}

@@ -1,0 +1,31 @@
+.discount-hours {
+  @include clearfix;
+  padding: 15px 35px 15px 20px;
+  box-sizing: border-box;
+  border: 1px solid $grey_2;
+}
+
+.discount-hours__clock {
+  float: left;
+  margin: 0;
+  width: 58px;
+  height: 58px;
+  @include breakpoint(tablet) {
+    margin-right: 80px;
+  }
+}
+
+.discount-hours__description {
+  float: right;
+  width: 120px;
+  padding-top: 10px;
+  margin: 0;
+
+  @include breakpoint(tablet) {
+    float: left;
+    width: auto;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
