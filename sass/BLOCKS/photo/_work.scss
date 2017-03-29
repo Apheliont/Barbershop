@@ -1,14 +1,36 @@
 .work {
+  margin-bottom: 20px;
   position: relative;
-  margin: 0 0 20px;
-  padding: 0;
+
+  figure {
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
 
   @include breakpoint(tablet) {
+    position: relative;
+  }
 
+  @include breakpoint(desktop) {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 0;
+    &:nth-child(4)
+    {
+      margin: 0 35px;
+    }
+
+
+    &--desktop-main {
+      display: block;
+      margin-bottom: 40px;
+    }
   }
 }
 
 .work__work-of-month {
+  z-index: 100;
   position: absolute;
   width: 155px;
   left: 0;
@@ -34,6 +56,23 @@
     clip-path: polygon(0 0, 100% 0, 10% 50%, 100% 100%, 0 100%);
     background-color: $brown_1;
   }
+
+  @include breakpoint(tablet) {
+    left: 0;
+    bottom: 30px;
+  }
+
+  @include breakpoint(desktop) {
+    right: 0;
+    top: 30px;
+    bottom: auto;
+    left: auto;
+
+    &:after {
+      left: -9px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 90% 50%);
+    }
+  }
 }
 
 .work__photo {
@@ -41,10 +80,22 @@
   &--tablet {
     display: none;
   }
+  &--desktop {
+    display: none;
+  }
 
   @include breakpoint(tablet) {
     display: none;
+
     &--tablet {
+      display: block;
+    }
+  }
+
+  @include breakpoint(desktop) {
+    display: none;
+
+    &--desktop {
       display: block;
     }
   }
@@ -64,6 +115,23 @@
     width: 370px;
     padding: 40px;
     margin: 0;
+  }
+
+  @include breakpoint(desktop) {
+    position: static;
+    width: 294px;
+    min-height: 245px;
+    padding: 30px;
+
+    &--desktop-main {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 480px;
+      padding: 120px 120px 30px 40px;
+      margin: 0;
+    }
   }
 }
 

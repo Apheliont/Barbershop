@@ -19,9 +19,9 @@
                 <button class="main-nav__close" type="button">&#10005;</button>
                 <ul class="main-nav__menu-list">
                     <li class="main-nav__menu-item"><a href="index.html">Главная</a></li>
-                    <li class="main-nav__menu-item"><a href="#">Наши работы</a></li>
-                    <li class="main-nav__menu-item main-nav__menu-item--active"><a href="#">Записаться</a></li>
-                    <li class="main-nav__menu-item"><a href="#">Контакты</a></li>
+                    <li class="main-nav__menu-item main-nav__menu-item--active"><a>Наши работы</a></li>
+                    <li class="main-nav__menu-item"><a href="appointment.html">Записаться</a></li>
+                    <li class="main-nav__menu-item"><a href="#contacts">Контакты</a></li>
                 </ul>
                 <ul class="main-nav__login-list">
                     <li class="main-nav__login-item"><i class="fa fa-sign-in" aria-hidden="true"></i><a class="main-nav__login" href="#">Вход</a></li>
@@ -59,40 +59,50 @@
                     <h2 class="work-list__title">Наши работы</h2>
                     <a class="work-list__backToIndexBtn neutral-btn" href="index.html">На главную</a>
                 </div>
-                    <figure class="work">
+                    <article class="work work--desktop-main">
                         <div class="work__work-of-month">Работа месяца</div>
-                        <img src="images/photo-1-mobile.jpg" alt="Работа месяца">
-                        <figcaption class="work__caption">
+                        <figure>
+                            <img class="work__photo" src="images/photo-1-mobile.jpg" alt="Работа месяца">
+                            <img class="work__photo  work__photo--tablet" src="images/photo-1-tablet.jpg" alt="Фото 1">
+                            <img class="work__photo  work__photo--desktop" src="images/photo-1-desktop.jpg" alt="Фото 1">
+                        </figure>
+                        <div class="work__caption work__caption--desktop-main">
                             <h3 class="work__author-name">Лжепётр Мчиславский</h3>
                             <p class="work__author-comment">Где я только ни стригся,
                                 но так как делаете это вы — не умеет никто другой!
                                 Еще раз спасибо и до скорого!
                             </p>
-                            <ul class="done-list">
+                            <ul class="done-list done-list--desktop-main">
                                 <li class="done-list__haircut">Стрижка</li>
                                 <li class="done-list__shaving">Бритье</li>
                                 <li class="done-list__mustache">Усы</li>
                             </ul>
-                        </figcaption>
-                    </figure>
+                        </div>
+                    </article>
 
-                <figure class="work">
-                    <img class="work__photo" src="images/photo-2-mobile.jpg" alt="Фото 2">
-                    <img class="work__photo work__photo--tablet" src="images/photo-2-tablet.jpg" alt="Фото 2">
-                    <figcaption class="work__caption">
+                <article class="work">
+                    <figure>
+                        <img class="work__photo" src="images/photo-2-mobile.jpg" alt="Фото 2">
+                        <img class="work__photo  work__photo--tablet" src="images/photo-2-tablet.jpg" alt="Фото 2">
+                        <img class="work__photo  work__photo--desktop" src="images/photo-2-desktop.jpg" alt="Фото 2">
+                    </figure>
+                    <div class="work__caption">
                         <h3 class="work__author-name">Саша Мальцев</h3>
                         <p class="work__author-comment">Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
                         </p>
                         <ul class="done-list">
                             <li class="done-list__haircut">Стрижка</li>
                         </ul>
-                    </figcaption>
-                </figure>
+                    </div>
+                </article>
 
-                <figure class="work">
-                    <img class="work__photo" src="images/photo-3-mobile.jpg" alt="Фото 3">
-                    <img class="work__photo work__photo--tablet" src="images/photo-3-tablet.jpg" alt="Фото 3">
-                    <figcaption class="work__caption">
+                <article class="work">
+                    <figure>
+                        <img class="work__photo" src="images/photo-3-mobile.jpg" alt="Фото 3">
+                        <img class="work__photo  work__photo--tablet" src="images/photo-3-tablet.jpg" alt="Фото 3">
+                        <img class="work__photo  work__photo--desktop" src="images/photo-3-desktop.jpg" alt="Фото 3">
+                    </figure>
+                    <div class="work__caption">
                         <h3 class="work__author-name">Владимир Иваныч</h3>
                         <p class="work__author-comment">К зимнему сезону — готов!
                         </p>
@@ -100,13 +110,16 @@
                             <li class="done-list__shaving">Борода</li>
                             <li class="done-list__mustache">Усы</li>
                         </ul>
-                    </figcaption>
-                </figure>
+                    </div>
+                </article>
 
-                <figure class="work">
-                    <img class="work__photo" src="images/photo-4-mobile.jpg" alt="Фото 4">
-                    <img class="work__photo work__photo--tablet" src="images/photo-4-tablet.jpg" alt="Фото 4">
-                    <figcaption class="work__caption">
+                <article class="work">
+                    <figure>
+                        <img class="work__photo" src="images/photo-4-mobile.jpg" alt="Фото 4">
+                        <img class="work__photo  work__photo--tablet" src="images/photo-4-tablet.jpg" alt="Фото 4">
+                        <img class="work__photo  work__photo--desktop" src="images/photo-4-desktop.jpg" alt="Фото 4">
+                    </figure>
+                    <div class="work__caption">
                         <h3 class="work__author-name">Винстон Синий</h3>
                         <p class="work__author-comment">Как только заростаю и волосы начинают мешать видеть
                             — бегом в Бородинский!
@@ -114,8 +127,8 @@
                         <ul class="done-list">
                             <li class="done-list__haircut">Стрижка</li>
                         </ul>
-                    </figcaption>
-                </figure>
+                    </div>
+                </article>
             </div>
         </section>
         <section class="price-list">
@@ -172,7 +185,7 @@
                 <p>г. Санкт-Петербург, ул. Большая Конюшенная 19/8</p>
                 <a class="page-footer__phone btn" href="tel: +7(812)555-66-66"><span class="page-footer__phone-word">Тел.:</span> +7(812)555-66-66</a>
             </section>
-            <section class="page-footer__social">
+            <section class="page-footer__social" id="contacts">
                 <p class="page-footer__social-title">Давайте дружить!</p>
                 <span class="social-list">
                     <a class="social-list__link" href="http://vk.com">

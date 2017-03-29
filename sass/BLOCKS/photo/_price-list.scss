@@ -23,6 +23,15 @@
       display: none;
     }
   }
+
+  @include breakpoint(desktop) {
+    &:after {
+      position: static;
+      z-index: 0;
+      bottom: 0;
+    }
+    @include clearfix;
+  }
 }
 
 .price-list__title {
@@ -34,6 +43,10 @@
 
   @include breakpoint(tablet) {
     text-align: left;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: 40px;
   }
 }
 
@@ -52,6 +65,12 @@
       border: 1px solid $grey_2;
       padding: 12px;
     }
+  }
+
+  @include breakpoint(desktop) {
+    float: left;
+    width: 630px;
+    min-height: 275px;
   }
 }
 
