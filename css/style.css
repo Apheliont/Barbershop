@@ -1783,13 +1783,13 @@ body {
         background-color: #f8f5f2; } }
   @media (min-width: 1200px) {
     .appointment {
-      margin-top: -270px; }
+      margin-top: -280px; }
       .appointment:before {
-        top: -64px;
-        height: 65px; } }
+        top: -59px;
+        height: 60px; } }
 
 .appointment__header {
-  padding-top: 60px;
+  padding-top: 55px;
   margin-bottom: 65px; }
   .appointment__header:after {
     content: "";
@@ -2019,7 +2019,6 @@ body {
 .work-list {
   position: relative;
   background-color: #f8f5f2;
-  padding-top: 30px;
   padding-bottom: 10px; }
   .work-list:after {
     content: "";

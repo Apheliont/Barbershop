@@ -36,17 +36,17 @@
   }
 
   @include breakpoint(desktop) {
-    margin-top: -270px;
+    margin-top: -280px;
     &:before {
-      top: -64px;
-      height: 65px;
+      top: -59px;
+      height: 60px;
     }
   }
 }
 
 .appointment__header {
   @include clearfix;
-  padding-top: 60px;
+  padding-top: 55px;
   margin-bottom: 65px;
 }
 
