@@ -6,7 +6,7 @@
   &:after {
     content: "";
     position: absolute;
-    z-index: 100;
+    z-index: 10;
     bottom: -34px;
     left: 0;
     right: 0;
@@ -47,7 +47,7 @@
 .appointment__header {
   @include clearfix;
   padding-top: 55px;
-  margin-bottom: 65px;
+  margin-bottom: 40px;
 }
 
 .appointment__title {

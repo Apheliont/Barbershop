@@ -1509,7 +1509,7 @@ body {
     display: block;
     position: absolute;
     height: 10px;
-    bottom: -10px;
+    bottom: -9px;
     left: 0;
     right: 0;
     clip-path: polygon(50% 100%, 0 20%, 0 0, 100% 0, 100% 20%);
@@ -1759,7 +1759,7 @@ body {
   .appointment:after {
     content: "";
     position: absolute;
-    z-index: 100;
+    z-index: 10;
     bottom: -34px;
     left: 0;
     right: 0;
@@ -1790,7 +1790,7 @@ body {
 
 .appointment__header {
   padding-top: 55px;
-  margin-bottom: 65px; }
+  margin-bottom: 40px; }
   .appointment__header:after {
     content: "";
     display: table;
@@ -2019,6 +2019,7 @@ body {
 .work-list {
   position: relative;
   background-color: #f8f5f2;
+  padding-top: 30px;
   padding-bottom: 10px; }
   .work-list:after {
     content: "";
